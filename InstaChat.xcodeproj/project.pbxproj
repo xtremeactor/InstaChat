@@ -1,0 +1,526 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7D294ECF1DE1FC8D0060DA97 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D294ECE1DE1FC8D0060DA97 /* AppDelegate.swift */; };
+		7D294ED11DE1FC8D0060DA97 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D294ED01DE1FC8D0060DA97 /* ViewController.swift */; };
+		7D294ED41DE1FC8D0060DA97 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D294ED21DE1FC8D0060DA97 /* Main.storyboard */; };
+		7D294ED61DE1FC8D0060DA97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D294ED51DE1FC8D0060DA97 /* Assets.xcassets */; };
+		7D294ED91DE1FC8D0060DA97 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D294ED71DE1FC8D0060DA97 /* LaunchScreen.storyboard */; };
+		7D294EE41DE1FC8D0060DA97 /* InstaChatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D294EE31DE1FC8D0060DA97 /* InstaChatTests.swift */; };
+		7D294EEF1DE1FC8D0060DA97 /* InstaChatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D294EEE1DE1FC8D0060DA97 /* InstaChatUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7D294EE01DE1FC8D0060DA97 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7D294EC31DE1FC8D0060DA97 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7D294ECA1DE1FC8D0060DA97;
+			remoteInfo = InstaChat;
+		};
+		7D294EEB1DE1FC8D0060DA97 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7D294EC31DE1FC8D0060DA97 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7D294ECA1DE1FC8D0060DA97;
+			remoteInfo = InstaChat;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		7D294ECB1DE1FC8D0060DA97 /* InstaChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstaChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D294ECE1DE1FC8D0060DA97 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7D294ED01DE1FC8D0060DA97 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7D294ED31DE1FC8D0060DA97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7D294ED51DE1FC8D0060DA97 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7D294ED81DE1FC8D0060DA97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7D294EDA1DE1FC8D0060DA97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7D294EDF1DE1FC8D0060DA97 /* InstaChatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InstaChatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D294EE31DE1FC8D0060DA97 /* InstaChatTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstaChatTests.swift; sourceTree = "<group>"; };
+		7D294EE51DE1FC8D0060DA97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7D294EEA1DE1FC8D0060DA97 /* InstaChatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InstaChatUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D294EEE1DE1FC8D0060DA97 /* InstaChatUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstaChatUITests.swift; sourceTree = "<group>"; };
+		7D294EF01DE1FC8D0060DA97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7D294EC81DE1FC8D0060DA97 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D294EDC1DE1FC8D0060DA97 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D294EE71DE1FC8D0060DA97 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7D294EC21DE1FC8D0060DA97 = {
+			isa = PBXGroup;
+			children = (
+				7D294ECD1DE1FC8D0060DA97 /* InstaChat */,
+				7D294EE21DE1FC8D0060DA97 /* InstaChatTests */,
+				7D294EED1DE1FC8D0060DA97 /* InstaChatUITests */,
+				7D294ECC1DE1FC8D0060DA97 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7D294ECC1DE1FC8D0060DA97 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7D294ECB1DE1FC8D0060DA97 /* InstaChat.app */,
+				7D294EDF1DE1FC8D0060DA97 /* InstaChatTests.xctest */,
+				7D294EEA1DE1FC8D0060DA97 /* InstaChatUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7D294ECD1DE1FC8D0060DA97 /* InstaChat */ = {
+			isa = PBXGroup;
+			children = (
+				7D294ECE1DE1FC8D0060DA97 /* AppDelegate.swift */,
+				7D294ED01DE1FC8D0060DA97 /* ViewController.swift */,
+				7D294ED21DE1FC8D0060DA97 /* Main.storyboard */,
+				7D294ED51DE1FC8D0060DA97 /* Assets.xcassets */,
+				7D294ED71DE1FC8D0060DA97 /* LaunchScreen.storyboard */,
+				7D294EDA1DE1FC8D0060DA97 /* Info.plist */,
+			);
+			path = InstaChat;
+			sourceTree = "<group>";
+		};
+		7D294EE21DE1FC8D0060DA97 /* InstaChatTests */ = {
+			isa = PBXGroup;
+			children = (
+				7D294EE31DE1FC8D0060DA97 /* InstaChatTests.swift */,
+				7D294EE51DE1FC8D0060DA97 /* Info.plist */,
+			);
+			path = InstaChatTests;
+			sourceTree = "<group>";
+		};
+		7D294EED1DE1FC8D0060DA97 /* InstaChatUITests */ = {
+			isa = PBXGroup;
+			children = (
+				7D294EEE1DE1FC8D0060DA97 /* InstaChatUITests.swift */,
+				7D294EF01DE1FC8D0060DA97 /* Info.plist */,
+			);
+			path = InstaChatUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7D294ECA1DE1FC8D0060DA97 /* InstaChat */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7D294EF31DE1FC8D0060DA97 /* Build configuration list for PBXNativeTarget "InstaChat" */;
+			buildPhases = (
+				7D294EC71DE1FC8D0060DA97 /* Sources */,
+				7D294EC81DE1FC8D0060DA97 /* Frameworks */,
+				7D294EC91DE1FC8D0060DA97 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = InstaChat;
+			productName = InstaChat;
+			productReference = 7D294ECB1DE1FC8D0060DA97 /* InstaChat.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7D294EDE1DE1FC8D0060DA97 /* InstaChatTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7D294EF61DE1FC8D0060DA97 /* Build configuration list for PBXNativeTarget "InstaChatTests" */;
+			buildPhases = (
+				7D294EDB1DE1FC8D0060DA97 /* Sources */,
+				7D294EDC1DE1FC8D0060DA97 /* Frameworks */,
+				7D294EDD1DE1FC8D0060DA97 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7D294EE11DE1FC8D0060DA97 /* PBXTargetDependency */,
+			);
+			name = InstaChatTests;
+			productName = InstaChatTests;
+			productReference = 7D294EDF1DE1FC8D0060DA97 /* InstaChatTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		7D294EE91DE1FC8D0060DA97 /* InstaChatUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7D294EF91DE1FC8D0060DA97 /* Build configuration list for PBXNativeTarget "InstaChatUITests" */;
+			buildPhases = (
+				7D294EE61DE1FC8D0060DA97 /* Sources */,
+				7D294EE71DE1FC8D0060DA97 /* Frameworks */,
+				7D294EE81DE1FC8D0060DA97 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7D294EEC1DE1FC8D0060DA97 /* PBXTargetDependency */,
+			);
+			name = InstaChatUITests;
+			productName = InstaChatUITests;
+			productReference = 7D294EEA1DE1FC8D0060DA97 /* InstaChatUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7D294EC31DE1FC8D0060DA97 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = TheAustinSpace;
+				TargetAttributes = {
+					7D294ECA1DE1FC8D0060DA97 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+					};
+					7D294EDE1DE1FC8D0060DA97 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 7D294ECA1DE1FC8D0060DA97;
+					};
+					7D294EE91DE1FC8D0060DA97 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 7D294ECA1DE1FC8D0060DA97;
+					};
+				};
+			};
+			buildConfigurationList = 7D294EC61DE1FC8D0060DA97 /* Build configuration list for PBXProject "InstaChat" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7D294EC21DE1FC8D0060DA97;
+			productRefGroup = 7D294ECC1DE1FC8D0060DA97 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7D294ECA1DE1FC8D0060DA97 /* InstaChat */,
+				7D294EDE1DE1FC8D0060DA97 /* InstaChatTests */,
+				7D294EE91DE1FC8D0060DA97 /* InstaChatUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7D294EC91DE1FC8D0060DA97 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D294ED91DE1FC8D0060DA97 /* LaunchScreen.storyboard in Resources */,
+				7D294ED61DE1FC8D0060DA97 /* Assets.xcassets in Resources */,
+				7D294ED41DE1FC8D0060DA97 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D294EDD1DE1FC8D0060DA97 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D294EE81DE1FC8D0060DA97 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7D294EC71DE1FC8D0060DA97 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D294ED11DE1FC8D0060DA97 /* ViewController.swift in Sources */,
+				7D294ECF1DE1FC8D0060DA97 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D294EDB1DE1FC8D0060DA97 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D294EE41DE1FC8D0060DA97 /* InstaChatTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D294EE61DE1FC8D0060DA97 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D294EEF1DE1FC8D0060DA97 /* InstaChatUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7D294EE11DE1FC8D0060DA97 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7D294ECA1DE1FC8D0060DA97 /* InstaChat */;
+			targetProxy = 7D294EE01DE1FC8D0060DA97 /* PBXContainerItemProxy */;
+		};
+		7D294EEC1DE1FC8D0060DA97 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7D294ECA1DE1FC8D0060DA97 /* InstaChat */;
+			targetProxy = 7D294EEB1DE1FC8D0060DA97 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7D294ED21DE1FC8D0060DA97 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7D294ED31DE1FC8D0060DA97 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		7D294ED71DE1FC8D0060DA97 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7D294ED81DE1FC8D0060DA97 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7D294EF11DE1FC8D0060DA97 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		7D294EF21DE1FC8D0060DA97 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7D294EF41DE1FC8D0060DA97 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = InstaChat/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.TheAustinSpace.InstaChat;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		7D294EF51DE1FC8D0060DA97 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = InstaChat/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.TheAustinSpace.InstaChat;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		7D294EF71DE1FC8D0060DA97 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = InstaChatTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.TheAustinSpace.InstaChatTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/InstaChat.app/InstaChat";
+			};
+			name = Debug;
+		};
+		7D294EF81DE1FC8D0060DA97 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = InstaChatTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.TheAustinSpace.InstaChatTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/InstaChat.app/InstaChat";
+			};
+			name = Release;
+		};
+		7D294EFA1DE1FC8D0060DA97 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = InstaChatUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.TheAustinSpace.InstaChatUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = InstaChat;
+			};
+			name = Debug;
+		};
+		7D294EFB1DE1FC8D0060DA97 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = InstaChatUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.TheAustinSpace.InstaChatUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = InstaChat;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7D294EC61DE1FC8D0060DA97 /* Build configuration list for PBXProject "InstaChat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D294EF11DE1FC8D0060DA97 /* Debug */,
+				7D294EF21DE1FC8D0060DA97 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7D294EF31DE1FC8D0060DA97 /* Build configuration list for PBXNativeTarget "InstaChat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D294EF41DE1FC8D0060DA97 /* Debug */,
+				7D294EF51DE1FC8D0060DA97 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		7D294EF61DE1FC8D0060DA97 /* Build configuration list for PBXNativeTarget "InstaChatTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D294EF71DE1FC8D0060DA97 /* Debug */,
+				7D294EF81DE1FC8D0060DA97 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		7D294EF91DE1FC8D0060DA97 /* Build configuration list for PBXNativeTarget "InstaChatUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D294EFA1DE1FC8D0060DA97 /* Debug */,
+				7D294EFB1DE1FC8D0060DA97 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7D294EC31DE1FC8D0060DA97 /* Project object */;
+}
