@@ -3,6 +3,7 @@ Pods
 # Xcode
 .DS_Store
 build/
+<<<<<<< HEAD
 *.pbxuser
 !default.pbxuser
 *.mode1v3
@@ -17,3 +18,9 @@ xcuserdata
 *.moved-aside
 DerivedData
 .idea/
+=======
+*.xcworkspace
+!default.xcworkspace
+xcuserdata
+DerivedData
+>>>>>>> ce218563691d06e53e32e28dcdf088f3f0712adb

@@ -1,3 +1,4 @@
+
 # Uncomment the next line to define a global platform for your project
 # platform :ios, '9.0'
 
@@ -12,8 +13,8 @@ target 'InstaChat' do
     pod 'SwiftyUserDefaults'
     pod 'UITextField+Shake', '~> 1.1'
     pod 'Firebase/Core'
-    pod 'Firebase/Database'	
-    pod 'Firebase/Auth'	
+    pod 'Firebase/Database'
+    pod 'Firebase/Auth'
 
   target 'InstaChatTests' do
     inherit! :search_paths
