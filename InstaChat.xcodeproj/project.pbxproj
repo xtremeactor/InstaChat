@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A194D733BC5AD3921C8705F /* Pods_InstaChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52934E90CBBB0633CF395C57 /* Pods_InstaChat.framework */; };
+		63C645ED34E732BA23FE34B8 /* Pods_InstaChatTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F8AAA89F79FB38DB94EA112 /* Pods_InstaChatTests.framework */; };
 		7D294ECF1DE1FC8D0060DA97 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D294ECE1DE1FC8D0060DA97 /* AppDelegate.swift */; };
 		7D294ED11DE1FC8D0060DA97 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D294ED01DE1FC8D0060DA97 /* ViewController.swift */; };
 		7D294ED41DE1FC8D0060DA97 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D294ED21DE1FC8D0060DA97 /* Main.storyboard */; };
@@ -14,6 +16,7 @@
 		7D294ED91DE1FC8D0060DA97 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D294ED71DE1FC8D0060DA97 /* LaunchScreen.storyboard */; };
 		7D294EE41DE1FC8D0060DA97 /* InstaChatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D294EE31DE1FC8D0060DA97 /* InstaChatTests.swift */; };
 		7D294EEF1DE1FC8D0060DA97 /* InstaChatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D294EEE1DE1FC8D0060DA97 /* InstaChatUITests.swift */; };
+		EAD354525443774FD507A900 /* Pods_InstaChatUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70C19770F3E964B750D97B4C /* Pods_InstaChatUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +37,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		08466AD69BA80A42F0E17189 /* Pods-InstaChatTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaChatTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InstaChatTests/Pods-InstaChatTests.debug.xcconfig"; sourceTree = "<group>"; };
+		1370914949D7EFE5DC9AF268 /* Pods-InstaChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-InstaChat/Pods-InstaChat.release.xcconfig"; sourceTree = "<group>"; };
+		28404F9A2B7A46080077CA9E /* Pods-InstaChatTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaChatTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-InstaChatTests/Pods-InstaChatTests.release.xcconfig"; sourceTree = "<group>"; };
+		2F151623BD703D03D655A7AF /* Pods-InstaChatUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaChatUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InstaChatUITests/Pods-InstaChatUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		52934E90CBBB0633CF395C57 /* Pods_InstaChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstaChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		640B9FFCA0A08D75218B6EB2 /* Pods-InstaChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaChat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InstaChat/Pods-InstaChat.debug.xcconfig"; sourceTree = "<group>"; };
+		70C19770F3E964B750D97B4C /* Pods_InstaChatUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstaChatUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		77225447623CC94D6FBA6EA4 /* Pods-InstaChatUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaChatUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-InstaChatUITests/Pods-InstaChatUITests.release.xcconfig"; sourceTree = "<group>"; };
 		7D294ECB1DE1FC8D0060DA97 /* InstaChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstaChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D294ECE1DE1FC8D0060DA97 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7D294ED01DE1FC8D0060DA97 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +58,7 @@
 		7D294EEA1DE1FC8D0060DA97 /* InstaChatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InstaChatUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D294EEE1DE1FC8D0060DA97 /* InstaChatUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstaChatUITests.swift; sourceTree = "<group>"; };
 		7D294EF01DE1FC8D0060DA97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8F8AAA89F79FB38DB94EA112 /* Pods_InstaChatTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstaChatTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A194D733BC5AD3921C8705F /* Pods_InstaChat.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63C645ED34E732BA23FE34B8 /* Pods_InstaChatTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,12 +82,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAD354525443774FD507A900 /* Pods_InstaChatUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6409EAAC29EB8BAFB8D3B219 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				52934E90CBBB0633CF395C57 /* Pods_InstaChat.framework */,
+				8F8AAA89F79FB38DB94EA112 /* Pods_InstaChatTests.framework */,
+				70C19770F3E964B750D97B4C /* Pods_InstaChatUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		7D294EC21DE1FC8D0060DA97 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +106,8 @@
 				7D294EE21DE1FC8D0060DA97 /* InstaChatTests */,
 				7D294EED1DE1FC8D0060DA97 /* InstaChatUITests */,
 				7D294ECC1DE1FC8D0060DA97 /* Products */,
+				B3F9F4A775F152585718B9C9 /* Pods */,
+				6409EAAC29EB8BAFB8D3B219 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +152,19 @@
 			path = InstaChatUITests;
 			sourceTree = "<group>";
 		};
+		B3F9F4A775F152585718B9C9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				640B9FFCA0A08D75218B6EB2 /* Pods-InstaChat.debug.xcconfig */,
+				1370914949D7EFE5DC9AF268 /* Pods-InstaChat.release.xcconfig */,
+				08466AD69BA80A42F0E17189 /* Pods-InstaChatTests.debug.xcconfig */,
+				28404F9A2B7A46080077CA9E /* Pods-InstaChatTests.release.xcconfig */,
+				2F151623BD703D03D655A7AF /* Pods-InstaChatUITests.debug.xcconfig */,
+				77225447623CC94D6FBA6EA4 /* Pods-InstaChatUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +172,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7D294EF31DE1FC8D0060DA97 /* Build configuration list for PBXNativeTarget "InstaChat" */;
 			buildPhases = (
+				6E23D09AE152778E9028C170 /* [CP] Check Pods Manifest.lock */,
 				7D294EC71DE1FC8D0060DA97 /* Sources */,
 				7D294EC81DE1FC8D0060DA97 /* Frameworks */,
 				7D294EC91DE1FC8D0060DA97 /* Resources */,
+				6119949353A365A85AF23344 /* [CP] Embed Pods Frameworks */,
+				A52E442000E456C1C9C39E91 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,9 +192,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7D294EF61DE1FC8D0060DA97 /* Build configuration list for PBXNativeTarget "InstaChatTests" */;
 			buildPhases = (
+				529512C761987667BFE32857 /* [CP] Check Pods Manifest.lock */,
 				7D294EDB1DE1FC8D0060DA97 /* Sources */,
 				7D294EDC1DE1FC8D0060DA97 /* Frameworks */,
 				7D294EDD1DE1FC8D0060DA97 /* Resources */,
+				5667F9DF119CEF27850A1E39 /* [CP] Embed Pods Frameworks */,
+				2FDA66B44209B780442974C7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,9 +213,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7D294EF91DE1FC8D0060DA97 /* Build configuration list for PBXNativeTarget "InstaChatUITests" */;
 			buildPhases = (
+				9AE2165B4CD95B6B364B8265 /* [CP] Check Pods Manifest.lock */,
 				7D294EE61DE1FC8D0060DA97 /* Sources */,
 				7D294EE71DE1FC8D0060DA97 /* Frameworks */,
 				7D294EE81DE1FC8D0060DA97 /* Resources */,
+				6E12622338291577F434B2C1 /* [CP] Embed Pods Frameworks */,
+				E2AE45533853676414FA6A13 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -253,6 +302,144 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2FDA66B44209B780442974C7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-InstaChatTests/Pods-InstaChatTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		529512C761987667BFE32857 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5667F9DF119CEF27850A1E39 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-InstaChatTests/Pods-InstaChatTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6119949353A365A85AF23344 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-InstaChat/Pods-InstaChat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6E12622338291577F434B2C1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-InstaChatUITests/Pods-InstaChatUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6E23D09AE152778E9028C170 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9AE2165B4CD95B6B364B8265 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A52E442000E456C1C9C39E91 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-InstaChat/Pods-InstaChat-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E2AE45533853676414FA6A13 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-InstaChatUITests/Pods-InstaChatUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7D294EC71DE1FC8D0060DA97 /* Sources */ = {
@@ -408,6 +595,7 @@
 		};
 		7D294EF41DE1FC8D0060DA97 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 640B9FFCA0A08D75218B6EB2 /* Pods-InstaChat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = InstaChat/Info.plist;
@@ -420,6 +608,7 @@
 		};
 		7D294EF51DE1FC8D0060DA97 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1370914949D7EFE5DC9AF268 /* Pods-InstaChat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = InstaChat/Info.plist;
@@ -432,6 +621,7 @@
 		};
 		7D294EF71DE1FC8D0060DA97 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 08466AD69BA80A42F0E17189 /* Pods-InstaChatTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -446,6 +636,7 @@
 		};
 		7D294EF81DE1FC8D0060DA97 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 28404F9A2B7A46080077CA9E /* Pods-InstaChatTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -460,6 +651,7 @@
 		};
 		7D294EFA1DE1FC8D0060DA97 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2F151623BD703D03D655A7AF /* Pods-InstaChatUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = InstaChatUITests/Info.plist;
@@ -473,6 +665,7 @@
 		};
 		7D294EFB1DE1FC8D0060DA97 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 77225447623CC94D6FBA6EA4 /* Pods-InstaChatUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = InstaChatUITests/Info.plist;
@@ -503,6 +696,7 @@
 				7D294EF51DE1FC8D0060DA97 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7D294EF61DE1FC8D0060DA97 /* Build configuration list for PBXNativeTarget "InstaChatTests" */ = {
 			isa = XCConfigurationList;
@@ -511,6 +705,7 @@
 				7D294EF81DE1FC8D0060DA97 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7D294EF91DE1FC8D0060DA97 /* Build configuration list for PBXNativeTarget "InstaChatUITests" */ = {
 			isa = XCConfigurationList;
@@ -519,6 +714,7 @@
 				7D294EFB1DE1FC8D0060DA97 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
