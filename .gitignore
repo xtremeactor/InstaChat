@@ -1,0 +1,9 @@
+Podfile.lock
+Pods
+# Xcode
+.DS_Store
+build/
+*.xcworkspace
+!default.xcworkspace
+xcuserdata
+DerivedData
