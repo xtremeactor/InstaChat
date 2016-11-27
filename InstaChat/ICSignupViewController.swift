@@ -51,8 +51,4 @@ class ICSignupViewController: UIViewController, UITextFieldDelegate {
     
 
     }
-    
-    
-    
-    
 }
