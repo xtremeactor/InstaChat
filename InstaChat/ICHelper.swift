@@ -8,10 +8,9 @@
 
 import Foundation
 
-class ICHelper: NSObject {
-    static let sharedInstance = ICUserService()
+class ICHelper {
 
-    func verifyEmail(email: String) -> Bool {
+    static func verifyEmail(email: String) -> Bool {
         // Task 1: Verify that email is an actual email. Things to check are: .com, .net, .co, includes @ and check the textfield is blank
         
         let emailFormat = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
@@ -21,7 +20,7 @@ class ICHelper: NSObject {
     }
     
     
-    func verifyPassword(password: String) -> Bool {
+    static func verifyPassword(password: String) -> Bool {
         // Task 2: Check for password: requirements: min length of 6 characters
         
         if password.characters.count > 6 {
@@ -32,19 +31,13 @@ class ICHelper: NSObject {
         
     }
     
-    
-    
-    func verifyUsername(username: String) -> Bool {
+    static func checkingUsername(string: String) -> Bool {
         // Task 3: Ensure that the username only allows alphanumeric characters
-        // return true if its a alphanumeric, return false if not
-        
-        let decimalDigits = CharacterSet.decimalDigits
-        
-        if (username.rangeOfCharacter(from: decimalDigits) != nil) && username.contains(",./;'!@#$%^&*()"){
+        // return true if its a alphanumeric, return false if not        
+        if (string.rangeOfCharacter(from: NSCharacterSet.letters.inverted) != nil && string.rangeOfCharacter(from: NSCharacterSet.decimalDigits.inverted) != nil){
             return false
-        }     else {
-            return true
         }
+        return true
     }
     
     

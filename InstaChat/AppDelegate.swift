@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import SwiftyUserDefaults
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,6 +18,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         FIRApp.configure()
+        if ((Defaults[.user_id]) != nil){
+            let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
+            let rootVC = storyboard.instantiateViewController(withIdentifier: "ICWelcomeViewController")
+            window?.rootViewController = rootVC
+        } else{
+            let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
+            let rootVC = storyboard.instantiateViewController(withIdentifier: "ViewController")
+            window?.rootViewController = rootVC
+        }
+    
         return true
     }
 

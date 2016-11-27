@@ -11,6 +11,7 @@
 		0F6363781DEB34A200C08F85 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0F6363771DEB34A200C08F85 /* GoogleService-Info.plist */; };
 		0F63637A1DEB3EF000C08F85 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F6363791DEB3EF000C08F85 /* Constants.swift */; };
 		0F63637D1DEB40CC00C08F85 /* ICUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F63637C1DEB40CC00C08F85 /* ICUserService.swift */; };
+		0F63637F1DEB559F00C08F85 /* ICCategorySelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F63637E1DEB559F00C08F85 /* ICCategorySelectionViewController.swift */; };
 		1A194D733BC5AD3921C8705F /* (null) in Frameworks */ = {isa = PBXBuildFile; };
 		435349AC48DEAAB443D3E2EB /* Pods_InstaChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A21C974D7CF333FA9CD3136F /* Pods_InstaChat.framework */; };
 		63C645ED34E732BA23FE34B8 /* Pods_InstaChatTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F8AAA89F79FB38DB94EA112 /* Pods_InstaChatTests.framework */; };
@@ -49,6 +50,7 @@
 		0F6363771DEB34A200C08F85 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0F6363791DEB3EF000C08F85 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		0F63637C1DEB40CC00C08F85 /* ICUserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICUserService.swift; sourceTree = "<group>"; };
+		0F63637E1DEB559F00C08F85 /* ICCategorySelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICCategorySelectionViewController.swift; sourceTree = "<group>"; };
 		23AAD1E0CBEF8347C1784042 /* Pods-InstaChatUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaChatUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InstaChatUITests/Pods-InstaChatUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		3C1826457E7AD9D744E3B7B9 /* Pods-InstaChatTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaChatTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InstaChatTests/Pods-InstaChatTests.debug.xcconfig"; sourceTree = "<group>"; };
 		43C0BDECBE8CCF4D8BD7EC1A /* Pods-InstaChatUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaChatUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-InstaChatUITests/Pods-InstaChatUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 				7DA68DF61DEB4A14007F2E84 /* ICLoginViewController.swift */,
 				0F13B3681DE2134D00F023E3 /* ICSignupViewController.swift */,
 				7DA68DF81DEB4BCC007F2E84 /* ICHelper.swift */,
+				0F63637E1DEB559F00C08F85 /* ICCategorySelectionViewController.swift */,
 				0F63637B1DEB40A900C08F85 /* Service */,
 				0F6363761DEB33EB00C08F85 /* View */,
 				0F6363751DEB33E600C08F85 /* Model */,
@@ -510,6 +513,7 @@
 				7DA68DF91DEB4BCC007F2E84 /* ICHelper.swift in Sources */,
 				7D294ECF1DE1FC8D0060DA97 /* AppDelegate.swift in Sources */,
 				0F63637A1DEB3EF000C08F85 /* Constants.swift in Sources */,
+				0F63637F1DEB559F00C08F85 /* ICCategorySelectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
