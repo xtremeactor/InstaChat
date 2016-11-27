@@ -91,6 +91,9 @@ class ICSignupViewController: UIViewController, UITextFieldDelegate {
         
                     // Task 6: Create a new VC that allows for us to push once the user has successfully created an account
                     
+                self.performSegue(withIdentifier: "welcomeSegue", sender: nil)
+                    
+                    
                 }
                 else{
                     print("User was not created")

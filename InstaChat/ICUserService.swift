@@ -28,6 +28,25 @@ class ICUserService: NSObject {
         }
     }
     
+    
+    
+    func signInUser(email: String, password: String, completion: @escaping (NSError?, Bool) -> Void){
     // Task 8: Create signInUser function and firebase method for signing user in
-
+        
+        FIRAuth.auth()?.signIn(withEmail: email, password: password) { (user, error) in
+            
+            
+            if ((error) != nil) {
+                completion(error as NSError?, false)
+            }
+            else{
+                print(user!)
+                Defaults[.user_id] = user?.uid
+                completion(nil, true)
+            }
+        }
+    }
+ 
+    
+   
 }

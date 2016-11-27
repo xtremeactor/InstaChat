@@ -22,6 +22,9 @@
 		7D294ED91DE1FC8D0060DA97 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D294ED71DE1FC8D0060DA97 /* LaunchScreen.storyboard */; };
 		7D294EE41DE1FC8D0060DA97 /* InstaChatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D294EE31DE1FC8D0060DA97 /* InstaChatTests.swift */; };
 		7D294EEF1DE1FC8D0060DA97 /* InstaChatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D294EEE1DE1FC8D0060DA97 /* InstaChatUITests.swift */; };
+		7DA68DF51DEB47D1007F2E84 /* ICWelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA68DF41DEB47D1007F2E84 /* ICWelcomeViewController.swift */; };
+		7DA68DF71DEB4A14007F2E84 /* ICLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA68DF61DEB4A14007F2E84 /* ICLoginViewController.swift */; };
+		7DA68DF91DEB4BCC007F2E84 /* ICHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA68DF81DEB4BCC007F2E84 /* ICHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +66,9 @@
 		7D294EEA1DE1FC8D0060DA97 /* InstaChatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InstaChatUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D294EEE1DE1FC8D0060DA97 /* InstaChatUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstaChatUITests.swift; sourceTree = "<group>"; };
 		7D294EF01DE1FC8D0060DA97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7DA68DF41DEB47D1007F2E84 /* ICWelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICWelcomeViewController.swift; sourceTree = "<group>"; };
+		7DA68DF61DEB4A14007F2E84 /* ICLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICLoginViewController.swift; sourceTree = "<group>"; };
+		7DA68DF81DEB4BCC007F2E84 /* ICHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICHelper.swift; sourceTree = "<group>"; };
 		8F8AAA89F79FB38DB94EA112 /* Pods_InstaChatTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstaChatTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DC4E69EFD8DC1D0CFA10816 /* Pods-InstaChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-InstaChat/Pods-InstaChat.release.xcconfig"; sourceTree = "<group>"; };
 		A21C974D7CF333FA9CD3136F /* Pods_InstaChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstaChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -166,7 +172,10 @@
 				7D294ECE1DE1FC8D0060DA97 /* AppDelegate.swift */,
 				0F6363791DEB3EF000C08F85 /* Constants.swift */,
 				7D294ED01DE1FC8D0060DA97 /* ViewController.swift */,
+				7DA68DF41DEB47D1007F2E84 /* ICWelcomeViewController.swift */,
+				7DA68DF61DEB4A14007F2E84 /* ICLoginViewController.swift */,
 				0F13B3681DE2134D00F023E3 /* ICSignupViewController.swift */,
+				7DA68DF81DEB4BCC007F2E84 /* ICHelper.swift */,
 				0F63637B1DEB40A900C08F85 /* Service */,
 				0F6363761DEB33EB00C08F85 /* View */,
 				0F6363751DEB33E600C08F85 /* Model */,
@@ -494,8 +503,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D294ED11DE1FC8D0060DA97 /* ViewController.swift in Sources */,
+				7DA68DF51DEB47D1007F2E84 /* ICWelcomeViewController.swift in Sources */,
 				0F13B3691DE2134D00F023E3 /* ICSignupViewController.swift in Sources */,
+				7DA68DF71DEB4A14007F2E84 /* ICLoginViewController.swift in Sources */,
 				0F63637D1DEB40CC00C08F85 /* ICUserService.swift in Sources */,
+				7DA68DF91DEB4BCC007F2E84 /* ICHelper.swift in Sources */,
 				7D294ECF1DE1FC8D0060DA97 /* AppDelegate.swift in Sources */,
 				0F63637A1DEB3EF000C08F85 /* Constants.swift in Sources */,
 			);
