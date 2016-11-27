@@ -32,8 +32,37 @@ class ICSignupViewController: UIViewController, UITextFieldDelegate {
         return true
     }
     
+    func verifyPassword(password: String) -> Bool {
+        let password = passwordTextfield.text
+        
+        if password?.characters.count > 6 {
+            return true
+        } else {
+            return false
+        }
+        
+    }
+    
+    func verifyEmail(password: String) -> Bool {
+        let email = emailTextfield.text
+        
+        if password?.characters.count > 6 {
+            return true
+        } else {
+            return false
+        }
+        
+    }
+    
+    
+    
+    
     @IBAction func signupPressed(_ sender: Any) {
+        
+        
         // Task 1: Verify that email is an actual email. Things to check are: .com, .net, .co, includes @ and check the textfield is blank
+        
+      
         
         // Task 2: Check for password: requirements: min length of 6 characters
         

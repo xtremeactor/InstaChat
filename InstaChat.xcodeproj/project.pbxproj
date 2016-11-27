@@ -131,6 +131,8 @@
 				7D294ECE1DE1FC8D0060DA97 /* AppDelegate.swift */,
 				7D294ED01DE1FC8D0060DA97 /* ViewController.swift */,
 				0F13B3681DE2134D00F023E3 /* ICSignupViewController.swift */,
+				7DA68DEE1DEB33F2007F2E84 /* Model */,
+				7DA68DED1DEB33E8007F2E84 /* Controller */,
 				7D294ED21DE1FC8D0060DA97 /* Main.storyboard */,
 				7D294ED51DE1FC8D0060DA97 /* Assets.xcassets */,
 				7D294ED71DE1FC8D0060DA97 /* LaunchScreen.storyboard */,
@@ -155,6 +157,20 @@
 				7D294EF01DE1FC8D0060DA97 /* Info.plist */,
 			);
 			path = InstaChatUITests;
+			sourceTree = "<group>";
+		};
+		7DA68DED1DEB33E8007F2E84 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		7DA68DEE1DEB33F2007F2E84 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		B3F9F4A775F152585718B9C9 /* Pods */ = {
