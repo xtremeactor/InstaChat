@@ -31,6 +31,8 @@ class ICSignupViewController: UIViewController, UITextFieldDelegate {
         
     }
     
+    // Side Task: Create a helper file that contains the verifyEmail and verifyPassword functions
+    
     func verifyEmail(email: String) -> Bool {
         // Task 1: Verify that email is an actual email. Things to check are: .com, .net, .co, includes @ and check the textfield is blank
         let email = emailTextfield.text!
@@ -86,6 +88,9 @@ class ICSignupViewController: UIViewController, UITextFieldDelegate {
                 }
                 else if (completed == true){
                     print("User was created successfully")
+        
+                    // Task 6: Create a new VC that allows for us to push once the user has successfully created an account
+                    
                 }
                 else{
                     print("User was not created")

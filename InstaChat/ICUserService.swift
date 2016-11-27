@@ -8,6 +8,7 @@
 
 import UIKit
 import FirebaseAuth
+import SwiftyUserDefaults
 
 class ICUserService: NSObject {
     static let sharedInstance = ICUserService()
@@ -20,16 +21,13 @@ class ICUserService: NSObject {
                 completion(error as NSError?, false)
             }
             else{
-                print(user)
+                print(user!)
+                Defaults[.user_id] = user?.uid
                 completion(nil, true)
             }
         }
     }
     
-    
-    func testFunction(input: String) -> String{
-        return "String"
-    }
-    
+    // Task 8: Create signInUser function and firebase method for signing user in
 
 }
