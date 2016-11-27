@@ -8,15 +8,16 @@
 
 import UIKit
 import FirebaseAuth
+import AlertHelperKit
 
 class ICSignupViewController: UIViewController, UITextFieldDelegate {
-
+    
     @IBOutlet weak var usernameTextfield: UITextField!
     @IBOutlet weak var passwordTextfield: UITextField!
     @IBOutlet weak var emailTextfield: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+//        self.usernameTextfield.delegate = self
         // Do any additional setup after loading the view.
     }
 
@@ -26,9 +27,8 @@ class ICSignupViewController: UIViewController, UITextFieldDelegate {
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-
-        
         return true
+        
     }
     
     func verifyEmail(email: String) -> Bool {
@@ -73,31 +73,29 @@ class ICSignupViewController: UIViewController, UITextFieldDelegate {
     
     
     @IBAction func signupPressed(_ sender: Any) {
-         let email = emailTextfield.text!
-         let password = passwordTextfield.text!
+        let email = emailTextfield.text!
+        let password = passwordTextfield.text!
+        let username = usernameTextfield.text!
         
-        if verifyEmail(email: email) && verifyPassword(password: password) {
+        if verifyEmail(email: email) && verifyPassword(password: password) && verifyUsername(username: username) {
             print("this works")
+            // Task 4: Submit to firebase
+            
+             FIRAuth.auth()?.createUser(withEmail: email, password: password) { (user, error) in
+                if ((error) != nil) {
+                    AlertHelperKit().showAlert(self, title: "Error", message: "\(error)", button: "Ok")
+                }
+                else{
+                    print(user)
+                    //Task 5: Store the "user id" as Defaults[.user_id]
+                    //             https://github.com/radex/SwiftyUserDefaults
+                }
+             
+             
+                
+             }
         } else {
             print ("this fails")
         }
-        
-     
-      
-
-        
-        
-        // Task 4: Submit to firebase
-        /*
-         FIRAuth.auth()?.createUser(withEmail: email, password: password) { (user, error) in
-         // ...
-         
-         //Task 5: Store the "user id" as Defaults[.user_id]
-         https://github.com/radex/SwiftyUserDefaults
-         }
-         */
-        
-    
-
     }
 }
