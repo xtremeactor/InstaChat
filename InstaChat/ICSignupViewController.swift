@@ -9,6 +9,7 @@
 import UIKit
 import FirebaseAuth
 import AlertHelperKit
+import SwiftyUserDefaults
 
 class ICSignupViewController: UIViewController, UITextFieldDelegate {
     
@@ -17,7 +18,6 @@ class ICSignupViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var emailTextfield: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-//        self.usernameTextfield.delegate = self
         // Do any additional setup after loading the view.
     }
 
@@ -80,20 +80,17 @@ class ICSignupViewController: UIViewController, UITextFieldDelegate {
         if verifyEmail(email: email) && verifyPassword(password: password) && verifyUsername(username: username) {
             print("this works")
             // Task 4: Submit to firebase
-            
-             FIRAuth.auth()?.createUser(withEmail: email, password: password) { (user, error) in
-                if ((error) != nil) {
+            ICUserService.sharedInstance.registerUser(email: email, password: password, username: username, completion: { (error, completed) in
+                if ((error) != nil){
                     AlertHelperKit().showAlert(self, title: "Error", message: "\(error)", button: "Ok")
                 }
-                else{
-                    print(user)
-                    //Task 5: Store the "user id" as Defaults[.user_id]
-                    //             https://github.com/radex/SwiftyUserDefaults
+                else if (completed == true){
+                    print("User was created successfully")
                 }
-             
-             
-                
-             }
+                else{
+                    print("User was not created")
+                }
+            })
         } else {
             print ("this fails")
         }
