@@ -17,6 +17,7 @@ class ICCategorySelectionViewController: UIViewController, UICollectionViewDeleg
     // HW Task 10: Setup homefeed to copy instagram layout. You will have a username label at the top, a imageview in the center, and two buttons on the bottom (like and message). Embed in a navigation controller
     
     // HW Task 11: Signup for pixabay api key and familiarize yourself with their api
+    let categoriesArray = ["Rooftop Bars 🌇","Brunch 🍳","Burgers 🍔","Hidden Gems 🌠","Beer Gardens 🍻","Desserts 🍰","Travel ✈️","Celeb Hot Spots 🍾","Fun Things to Do 🎢","Pizza 🍕","Trendy ✅", "Cocktail Bars 🍸", "Date Spots 🌹", "Arts & Cuture 🏛", "Sports Bars 🏈", "Cheap Eats 💯", "Ice Cream 🍦", "Comfort Food 🍗 ", "Vegetarian/Vegan 🍆", "Workouts 💪",  "Coffee Shops ☕️", "Seafood 🍤 ", "Wine Bars 🍷", "Global Grub 🌏",   "Steals and Deals 💰"]
     
     @IBOutlet var collectionView: UICollectionView!
     
