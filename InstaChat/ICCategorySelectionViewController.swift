@@ -8,7 +8,8 @@
 
 import UIKit
 
-var list = [String]()
+var selectedCategories = [String]()
+
 
 class ICCategorySelectionViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
@@ -21,18 +22,9 @@ class ICCategorySelectionViewController: UIViewController, UICollectionViewDeleg
     
     @IBOutlet var collectionView: UICollectionView!
     
-    @IBOutlet var categoryTextfield: UITextField!
-    
-    @IBAction func categoryChosen(_ sender: AnyObject) {
-        let category = categoryTextfield.text!
-        list.append(category)
-        collectionView.reloadData()
-        
-        
-    }
   
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return list.count
+        return categoriesArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -40,16 +32,39 @@ class ICCategorySelectionViewController: UIViewController, UICollectionViewDeleg
         
     
     
-    let selectedCategory = list[indexPath.row]
+    let selectedCategory = categoriesArray[indexPath.row]
     cell.categoryLabel.text = selectedCategory
     
     
     return cell
     
+  }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let selectedCategory = categoriesArray[indexPath.row]
+        selectedCategories.append(selectedCategory)
+        print(selectedCategories)
+        
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+       
+        let selectedCategory = categoriesArray[indexPath.row]
+        
+        
+       let index = selectedCategories.index(of: selectedCategory)
+        
+    selectedCategories.remove(at: index!)
+        
+        print(selectedCategories)
+        
+ // selectedCategories.index(where: selectedCategory = true)
+        
+        
+    }
+    
 
     
-   // var categoriesArray = ["Planets"]
-  }
     
     
     func collectionView(_ collectionView: UICollectionView,
@@ -61,9 +76,15 @@ class ICCategorySelectionViewController: UIViewController, UICollectionViewDeleg
         let widthPerItem = availableWidth / itemsPerRow
         
         return CGSize(width: widthPerItem, height: widthPerItem)
+        
       }
     
     
+    @IBAction func categorySelected(_ sender: AnyObject) {
+       self.performSegue(withIdentifier: "categoryToHomeFeedSegue", sender: nil)
+        
+        
+    }
     
    
     

@@ -40,7 +40,7 @@ class ICLoginViewController: UIViewController {
                             }
                             else{
                                 // Task 6: Create a new VC that allows for us to push once the user has successfully created an account
-                                self.performSegue(withIdentifier: "loginSegue", sender: nil)
+                                self.performSegue(withIdentifier: "loginToHomeFeedSegue", sender: nil)
                             }
                         }
                         else{
