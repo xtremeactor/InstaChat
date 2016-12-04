@@ -21,7 +21,33 @@ class ICAuthenticationService: NSObject {
         
         // Store the access token in NSdefaults as well as FB
         
+        let parameters: Parameters = ["client_ID": "client_SECRET"]
+        
+        
+        //     Alamofire.request("https://api.yelp.com/oauth2/token", method: .post).responseJSON { response in
+        
+        Alamofire.request("https://api.yelp.com/oauth2/token", method: .post, parameters: parameters).responseJSON { response in
+            
+             if (response.response?.statusCode == 200){
+                
+            let data = response.result.value as! NSDictionary
+                
+            let accessToken = data.object(forKey: "access_token")
+                
+            print(accessToken)
+                
+          }  else {
+            print("Error")
+
+                    
+          //  Defaults[.access_token] = user?.access_token
+                
+
+                
+                
         
     }
-
 }
+}
+}
+
