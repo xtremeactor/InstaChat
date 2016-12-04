@@ -8,7 +8,9 @@
 
 import UIKit
 
-class ICCategorySelectionViewController: UIViewController, UICollectionViewDelegate {
+var list = [String]()
+
+class ICCategorySelectionViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     // HW Task 9: Create the UI for the Category selection VC, compile a list of categories, and populate them into an array and into the collection view. Set the collection view to have 2 cells across. Implement selected collection view delegate method for choosing multiple categories
     
@@ -16,9 +18,55 @@ class ICCategorySelectionViewController: UIViewController, UICollectionViewDeleg
     
     // HW Task 11: Signup for pixabay api key and familiarize yourself with their api
     
+    @IBOutlet var collectionView: UICollectionView!
     
-    var categoriesArray = ["Planets"]
+    @IBOutlet var categoryTextfield: UITextField!
+    
+    @IBAction func categoryChosen(_ sender: AnyObject) {
+        let category = categoryTextfield.text!
+        list.append(category)
+        collectionView.reloadData()
+        
+        
+    }
+  
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return list.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "grid", for: indexPath) as! Grid
+        
+    
+    
+    let selectedCategory = list[indexPath.row]
+    cell.categoryLabel.text = selectedCategory
+    
+    
+    return cell
+    
 
+    
+   // var categoriesArray = ["Planets"]
+  }
+    
+    
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        let itemsPerRow: CGFloat = 4
+        let availableWidth = view.frame.width
+        let widthPerItem = availableWidth / itemsPerRow
+        
+        return CGSize(width: widthPerItem, height: widthPerItem)
+      }
+    
+    
+    
+   
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
