@@ -40,7 +40,19 @@ class ICHelper {
         return true
     }
     
-    
+//    static func authenticateWithYelp(completion: @escaping (NSError?, Bool) -> Void) {
+//    
+//        ICAuthenticationService.sharedInstance.authenticateUser { (error, isCompleted) in
+//            if ((error) != nil){
+//                print(error)
+//                completion(error, false)
+//            }
+//            else{
+//                print("its done")
+//                completion(nil, true)
+//            }
+//        }
+//    }
 
-    }
+}
 

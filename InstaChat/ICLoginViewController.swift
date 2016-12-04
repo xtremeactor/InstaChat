@@ -29,8 +29,24 @@ class ICLoginViewController: UIViewController {
                 }
                 else if (completed == true){
                     print("User signed in successfully")                    
-                    // Task 6: Create a new VC that allows for us to push once the user has successfully created an account
-                    self.performSegue(withIdentifier: "loginSegue", sender: nil)
+                    ICAuthenticationService.sharedInstance.authenticateUser { (error, isCompleted) in
+                        if ((error) != nil){
+                            AlertHelperKit().showAlert(self, title: "Error", message: "\(error)", button: "Ok")
+                        }
+                        else if (isCompleted == true){
+                            print("its done")
+                            if (Defaults[.access_token]?.isEmpty)!{
+                                AlertHelperKit().showAlert(self, title: "Error", message: "error", button: "Ok")
+                            }
+                            else{
+                                // Task 6: Create a new VC that allows for us to push once the user has successfully created an account
+                                self.performSegue(withIdentifier: "loginSegue", sender: nil)
+                            }
+                        }
+                        else{
+                            AlertHelperKit().showAlert(self, title: "Error", message: "\(error)", button: "Ok")
+                        }
+                    }
                 }
                 else{
                     print("User was not signed in successfully")
