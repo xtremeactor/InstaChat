@@ -46,5 +46,20 @@ class ICUserService: NSObject {
     }
  
     
+    // Create a new service function that updates the users category preferences. 
+    
+    /*
+     {
+         "users": {
+             "jason": {
+                "name": "Ada Lovelace",
+                "email": "123123123123",
+                "preferences": [rooftopbar, ]
+             },
+             ....
+        }
+     }
+ */
+    
    
 }

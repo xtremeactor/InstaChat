@@ -19,6 +19,7 @@ class ICCategorySelectionViewController: UIViewController, UICollectionViewDeleg
     
     // HW Task 11: Signup for pixabay api key and familiarize yourself with their api
     let categoriesArray = ["Rooftop Bars 🌇","Brunch 🍳","Burgers 🍔","Hidden Gems 🌠","Beer Gardens 🍻","Desserts 🍰","Travel ✈️","Celeb Hot Spots 🍾","Fun Things to Do 🎢","Pizza 🍕","Trendy ✅", "Cocktail Bars 🍸", "Date Spots 🌹", "Arts & Cuture 🏛", "Sports Bars 🏈", "Cheap Eats 💯", "Ice Cream 🍦", "Comfort Food 🍗 ", "Vegetarian/Vegan 🍆", "Workouts 💪",  "Coffee Shops ☕️", "Seafood 🍤 ", "Wine Bars 🍷", "Global Grub 🌏",   "Steals and Deals 💰"]
+    let categoriesStringArray = ["rooftop bar", "brunch", "burgers", "hidden gem"]
     
     @IBOutlet var collectionView: UICollectionView!
     
@@ -29,11 +30,12 @@ class ICCategorySelectionViewController: UIViewController, UICollectionViewDeleg
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
      let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "grid", for: indexPath) as! Grid
-        
-    
-    
     let selectedCategory = categoriesArray[indexPath.row]
     cell.categoryLabel.text = selectedCategory
+    //Side HW Task: check if index in array contains something selectedCategories, then change backgroud of cell
+    
+    
+    
     
     
     return cell
@@ -41,31 +43,26 @@ class ICCategorySelectionViewController: UIViewController, UICollectionViewDeleg
   }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let selectedCategory = categoriesArray[indexPath.row]
-        selectedCategories.append(selectedCategory)
-        print(selectedCategories)
-        
+        let category = categoriesArray[indexPath.row]
+        if (selectedCategories.contains(category)){
+            print("\(category) is in the array already..now removing")
+            let selectedIndex = selectedCategories.index(of: category)
+            selectedCategories.remove(at: selectedIndex!)
+            print(selectedCategories)
+            collectionView.reloadData()
+        }
+        else{
+            print("\(category) is not in the array already..now adding")
+            let selectedCategory = categoriesArray[indexPath.row]
+            selectedCategories.append(selectedCategory)
+            print(selectedCategories)
+            collectionView.reloadData()
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
-       
-        let selectedCategory = categoriesArray[indexPath.row]
-        
-        
-       let index = selectedCategories.index(of: selectedCategory)
-        
-    selectedCategories.remove(at: index!)
-        
-        print(selectedCategories)
-        
- // selectedCategories.index(where: selectedCategory = true)
-        
         
     }
-    
-
-    
-    
     
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,

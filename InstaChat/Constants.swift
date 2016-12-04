@@ -16,4 +16,5 @@ extension DefaultsKeys {
 class Constants {
     static let CLIENT_ID = "EBginzJclbNG2wa5HODcqg"
     static let CLIENT_SECRET = "yltpbSsDhOm7VXWHBwrqHhV3TDMO1CTJiWqJhyu2hMCbnv3uEpqLH2KPhB47x0nm"
+    static let BASE_FIREBASE_URL = "https://instachat-25d03.firebaseio.com/"
 }
