@@ -15,6 +15,8 @@ target 'InstaChat' do
     pod 'Firebase/Core'
     pod 'Firebase/Database'
     pod 'Firebase/Auth'
+    pod 'ObjectMapper', '~> 2.2'
+
 
   target 'InstaChatTests' do
     inherit! :search_paths

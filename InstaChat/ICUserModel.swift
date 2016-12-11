@@ -10,9 +10,9 @@ import ObjectMapper
 
 class User: Mappable {
     // Defined properties
-    var username: String?
-    var email: String?
-    var preferences: [String]?
+    open var username: String?
+    open var email: String?
+    open var preferences: [String]?
     
     // Custom init method for setting properties
     public init(username: String, email: String, preferences: Array<String>){
@@ -22,12 +22,12 @@ class User: Mappable {
     }
     
     // init method that's called initially when you invoke Mappable
-    public required convenience init?(map: Map) {
-        self.init()
+    public required init?(map: Map) {
+        
     }
     
     // Mappable: mapping method for JSON -> Object
-    func mapping(map: Map) {
+    open func mapping(map: Map) {
         username    <- map["username"]
         email       <- map["email"]
         preferences <- map["preferences"]

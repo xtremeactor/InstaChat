@@ -29,7 +29,7 @@ class ICLoginViewController: UIViewController {
                 }
                 else if (completed == true){
                     print("User signed in successfully")                    
-                    ICAuthenticationService.sharedInstance.authenticateUser { (error, isCompleted) in
+                    ICAuthenticationService.sharedInstance.authenticateYelp { (error, isCompleted) in
                         if ((error) != nil){
                             AlertHelperKit().showAlert(self, title: "Error", message: "\(error)", button: "Ok")
                         }

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0F13B3691DE2134D00F023E3 /* ICSignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F13B3681DE2134D00F023E3 /* ICSignupViewController.swift */; };
+		0F30CAC91DFDBCC600916E32 /* ICUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F30CAC81DFDBCC600916E32 /* ICUserModel.swift */; };
 		0F61DE911DF473500067E49E /* ICAuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F61DE901DF473500067E49E /* ICAuthenticationService.swift */; };
 		0F6363781DEB34A200C08F85 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0F6363771DEB34A200C08F85 /* GoogleService-Info.plist */; };
 		0F63637A1DEB3EF000C08F85 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F6363791DEB3EF000C08F85 /* Constants.swift */; };
@@ -49,6 +50,7 @@
 
 /* Begin PBXFileReference section */
 		0F13B3681DE2134D00F023E3 /* ICSignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICSignupViewController.swift; sourceTree = "<group>"; };
+		0F30CAC81DFDBCC600916E32 /* ICUserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICUserModel.swift; sourceTree = "<group>"; };
 		0F61DE901DF473500067E49E /* ICAuthenticationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICAuthenticationService.swift; sourceTree = "<group>"; };
 		0F6363771DEB34A200C08F85 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0F6363791DEB3EF000C08F85 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 		0F6363751DEB33E600C08F85 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				0F30CAC81DFDBCC600916E32 /* ICUserModel.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -522,6 +525,7 @@
 				0F63637A1DEB3EF000C08F85 /* Constants.swift in Sources */,
 				0F63637F1DEB559F00C08F85 /* ICCategorySelectionViewController.swift in Sources */,
 				0F61DE911DF473500067E49E /* ICAuthenticationService.swift in Sources */,
+				0F30CAC91DFDBCC600916E32 /* ICUserModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

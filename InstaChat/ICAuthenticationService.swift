@@ -14,7 +14,7 @@ import SwiftyUserDefaults
 class ICAuthenticationService: NSObject {
     static let sharedInstance = ICAuthenticationService()
     
-    func authenticateUser(completion: @escaping (NSError?, Bool) -> Void){
+    func authenticateYelp(completion: @escaping (NSError?, Bool) -> Void){
         // Send a POST request using AF to https://api.yelp.com/oauth2/token
         // with client id and client secret
         

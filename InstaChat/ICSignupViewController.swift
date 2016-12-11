@@ -10,6 +10,7 @@ import UIKit
 import FirebaseAuth
 import AlertHelperKit
 import SwiftyUserDefaults
+import ObjectMapper
 
 class ICSignupViewController: UIViewController, UITextFieldDelegate {
     
@@ -53,8 +54,9 @@ class ICSignupViewController: UIViewController, UITextFieldDelegate {
                         if error != nil {
                             AlertHelperKit().showAlert(self, title: "Error adding to Firebase", message: "\(error)", button: "Ok")
                         } else {
+                            
                             // Authentication Service to third party APIs - Yelp, etc
-                            ICAuthenticationService.sharedInstance.authenticateUser(completion: { (error, isCompleted) in
+                            ICAuthenticationService.sharedInstance.authenticateYelp(completion: { (error, isCompleted) in
                                 if ((error) != nil){
                                     AlertHelperKit().showAlert(self, title: "Error", message: "\(error)", button: "Ok")
                                 }
