@@ -13,6 +13,7 @@ import SwiftyUserDefaults
 
 class ICUserService: NSObject {
     static let sharedInstance = ICUserService()
+    let ref: FIRDatabaseReference! = FIRDatabase.database().reference()
     
     func registerUser(email: String, password: String, username: String, completion: @escaping (NSError?, Bool) -> Void){
         // Firebase methods
@@ -29,7 +30,18 @@ class ICUserService: NSObject {
         }
     }
     
+    func addUserToFirebase(email: String, username: String, completion: @escaping (NSError?, Bool) -> Void){
+        // FIrebase method for adding a user record to DB
+        let userId = Defaults[.user_id]!
+        let post = ["username": username, "email": email]
+        self.ref.child("users/\(userId)").setValue(post)
+        // https://instachat-25d03.firebaseio.com/users/ygGpovmTtFRkQDoLvP6YzU1tb8F3/email
+        completion(nil, true)
+    }
     
+    func addPreferencesToFirebaseUser(preference: Array<String>, completion: @escaping (NSError?, Bool) -> Void){
+        
+    }
     
     func signInUser(email: String, password: String, completion: @escaping (NSError?, Bool) -> Void){
     // Task 8: Create signInUser function and firebase method for signing user in
@@ -56,6 +68,7 @@ class ICUserService: NSObject {
         FIRAnalytics.setUserPropertyString(food, forName: "Preference")
         
     }
+    
     
     // Create a new service function that updates the users category preferences. 
     

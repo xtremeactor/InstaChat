@@ -46,29 +46,34 @@ class ICSignupViewController: UIViewController, UITextFieldDelegate {
                 if ((error) != nil){
                     AlertHelperKit().showAlert(self, title: "Error", message: "\(error)", button: "Ok")
                 }
-                else if (completed == true){
+                if (completed == true){
                     print("User was created successfully")
-                    ICAuthenticationService.sharedInstance.authenticateUser { (error, isCompleted) in
-                        if ((error) != nil){
-                            AlertHelperKit().showAlert(self, title: "Error", message: "\(error)", button: "Ok")
-                        }
-                        else if (isCompleted == true){
-                            print("its done")
-                            if (Defaults[.access_token]?.isEmpty)!{
-                                AlertHelperKit().showAlert(self, title: "Error", message: "error", button: "Ok")
+                    // Add them as a user in Firebase Database
+                    ICUserService.sharedInstance.addUserToFirebase(email: email, username: username, completion: { (error, completed) in
+                        if error != nil {
+                            AlertHelperKit().showAlert(self, title: "Error adding to Firebase", message: "\(error)", button: "Ok")
+                        } else {
+                            // Authentication Service to third party APIs - Yelp, etc
+                            ICAuthenticationService.sharedInstance.authenticateUser { (error, isCompleted) in
+                                if ((error) != nil){
+                                    AlertHelperKit().showAlert(self, title: "Error", message: "\(error)", button: "Ok")
+                                }
+                                else if (isCompleted == true){
+                                    print("its done")
+                                    if (Defaults[.access_token]?.isEmpty)!{
+                                        AlertHelperKit().showAlert(self, title: "Error", message: "error", button: "Ok")
+                                    }
+                                    else{
+                                        // Task 6: Create a new VC that allows for us to push once the user has successfully created an account
+                                        self.performSegue(withIdentifier: "welcomeSegue", sender: nil)
+                                    }
+                                }
+                                else{
+                                    AlertHelperKit().showAlert(self, title: "Error", message: "\(error)", button: "Ok")
+                                }
                             }
-                            else{
-                                // Task 6: Create a new VC that allows for us to push once the user has successfully created an account
-                                self.performSegue(withIdentifier: "welcomeSegue", sender: nil)
-                            }
                         }
-                        else{
-                            AlertHelperKit().showAlert(self, title: "Error", message: "\(error)", button: "Ok")
-                        }
-                    }
-                }
-                else{
-                    print("User was not created")
+                    })
                 }
             })
         }

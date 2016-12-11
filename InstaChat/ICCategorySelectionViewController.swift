@@ -19,7 +19,7 @@ class ICCategorySelectionViewController: UIViewController, UICollectionViewDeleg
     
     // HW Task 11: Signup for pixabay api key and familiarize yourself with their api
     let categoriesArray = ["Rooftop Bars 🌇","Brunch 🍳","Burgers 🍔","Hidden Gems 🌠","Beer Gardens 🍻","Desserts 🍰","Travel ✈️","Celeb Hot Spots 🍾","Fun Things to Do 🎢","Pizza 🍕","Trendy ✅", "Cocktail Bars 🍸", "Date Spots 🌹", "Arts & Cuture 🏛", "Sports Bars 🏈", "Cheap Eats 💯", "Ice Cream 🍦", "Comfort Food 🍗 ", "Vegetarian/Vegan 🍆", "Workouts 💪",  "Coffee Shops ☕️", "Seafood 🍤 ", "Wine Bars 🍷", "Global Grub 🌏",   "Steals and Deals 💰"]
-    let categoriesStringArray = ["rooftop bar", "brunch", "burgers", "hidden gem"]
+    let categoriesStringArray = ["rooftop bar", "brunch", "burgers", "hidden gem", "beer gardens"]
     
     @IBOutlet var collectionView: UICollectionView!
     
@@ -53,7 +53,7 @@ class ICCategorySelectionViewController: UIViewController, UICollectionViewDeleg
         }
         else{
             print("\(category) is not in the array already..now adding")
-            let selectedCategory = categoriesArray[indexPath.row]
+            let selectedCategory = categoriesStringArray[indexPath.row]
             selectedCategories.append(selectedCategory)
             print(selectedCategories)
             collectionView.reloadData()
@@ -78,11 +78,13 @@ class ICCategorySelectionViewController: UIViewController, UICollectionViewDeleg
     
     
     @IBAction func categorySelected(_ sender: AnyObject) {
-       self.performSegue(withIdentifier: "categoryToHomeFeedSegue", sender: nil)
+        // call addPreferencesToFirebaseUser in order to save our preferences
         
-        
-        ICUserService.sharedInstance.savePreference()
-        
+//       self.performSegue(withIdentifier: "categoryToHomeFeedSegue", sender: nil)
+//
+//        
+//        ICUserService.sharedInstance.savePreference()
+//        
         
     }
     
