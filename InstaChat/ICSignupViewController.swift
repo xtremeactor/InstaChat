@@ -54,7 +54,7 @@ class ICSignupViewController: UIViewController, UITextFieldDelegate {
                             AlertHelperKit().showAlert(self, title: "Error adding to Firebase", message: "\(error)", button: "Ok")
                         } else {
                             // Authentication Service to third party APIs - Yelp, etc
-                            ICAuthenticationService.sharedInstance.authenticateUser { (error, isCompleted) in
+                            ICAuthenticationService.sharedInstance.authenticateUser(completion: { (error, isCompleted) in
                                 if ((error) != nil){
                                     AlertHelperKit().showAlert(self, title: "Error", message: "\(error)", button: "Ok")
                                 }
@@ -71,7 +71,9 @@ class ICSignupViewController: UIViewController, UITextFieldDelegate {
                                 else{
                                     AlertHelperKit().showAlert(self, title: "Error", message: "\(error)", button: "Ok")
                                 }
-                            }
+
+                            })
+                            
                         }
                     })
                 }
