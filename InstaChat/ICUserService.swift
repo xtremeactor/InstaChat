@@ -40,6 +40,11 @@ class ICUserService: NSObject {
     }
     
     func addPreferencesToFirebaseUser(preference: Array<String>, completion: @escaping (NSError?, Bool) -> Void){
+        let userId = Defaults[.user_id]!
+        self.ref.child("users/\(userId)/preferences").setValue(selectedCategories)
+        
+        completion(nil, true)
+        
         
     }
     
@@ -62,13 +67,7 @@ class ICUserService: NSObject {
         }
     }
  
-    
-    func savePreference(){
-        let food = selectedCategories[0]
-        FIRAnalytics.setUserPropertyString(food, forName: "Preference")
-        
-    }
-    
+ 
     
     // Create a new service function that updates the users category preferences. 
     

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AlertHelperKit
 
 var selectedCategories = [String]()
 
@@ -19,7 +20,10 @@ class ICCategorySelectionViewController: UIViewController, UICollectionViewDeleg
     
     // HW Task 11: Signup for pixabay api key and familiarize yourself with their api
     let categoriesArray = ["Rooftop Bars 🌇","Brunch 🍳","Burgers 🍔","Hidden Gems 🌠","Beer Gardens 🍻","Desserts 🍰","Travel ✈️","Celeb Hot Spots 🍾","Fun Things to Do 🎢","Pizza 🍕","Trendy ✅", "Cocktail Bars 🍸", "Date Spots 🌹", "Arts & Cuture 🏛", "Sports Bars 🏈", "Cheap Eats 💯", "Ice Cream 🍦", "Comfort Food 🍗 ", "Vegetarian/Vegan 🍆", "Workouts 💪",  "Coffee Shops ☕️", "Seafood 🍤 ", "Wine Bars 🍷", "Global Grub 🌏",   "Steals and Deals 💰"]
-    let categoriesStringArray = ["rooftop bar", "brunch", "burgers", "hidden gem", "beer gardens"]
+    
+    let categoriesStringArray = ["rooftop bar", "brunch", "burgers", "hidden gem", "beer gardens", "desserts", "travel", "celeb hot spot", "fun things to do", "pizza", "trendy", "cocktail bars", "date spots", "arts and culture", "sports bars", "cheap eats", "ice cream", "comfort food", "vegetarian", "workout", "coffee", "seafood" ,"wine bars", "global grun", "Steals and deals"]
+    
+    
     
     @IBOutlet var collectionView: UICollectionView!
     
@@ -44,6 +48,7 @@ class ICCategorySelectionViewController: UIViewController, UICollectionViewDeleg
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let category = categoriesArray[indexPath.row]
+        
         if (selectedCategories.contains(category)){
             print("\(category) is in the array already..now removing")
             let selectedIndex = selectedCategories.index(of: category)
@@ -57,6 +62,8 @@ class ICCategorySelectionViewController: UIViewController, UICollectionViewDeleg
             selectedCategories.append(selectedCategory)
             print(selectedCategories)
             collectionView.reloadData()
+            
+            
         }
     }
     
@@ -78,17 +85,20 @@ class ICCategorySelectionViewController: UIViewController, UICollectionViewDeleg
     
     
     @IBAction func categorySelected(_ sender: AnyObject) {
-        // call addPreferencesToFirebaseUser in order to save our preferences
-        
-//       self.performSegue(withIdentifier: "categoryToHomeFeedSegue", sender: nil)
-//
-//        
-//        ICUserService.sharedInstance.savePreference()
-//        
+ 
+        ICUserService.sharedInstance.addPreferencesToFirebaseUser(preference: selectedCategories) { (error, completed) in
+            if ((error) != nil){
+            AlertHelperKit().showAlert(self, title: "Error", message: "\(error)", button: "Ok")
+             }
+            else if (completed == true){
+
+            self.performSegue(withIdentifier: "categoryToHomeFeedSegue", sender: nil)
+        }
         
     }
     
-   
+    }
+    
     
     
     override func viewDidLoad() {
