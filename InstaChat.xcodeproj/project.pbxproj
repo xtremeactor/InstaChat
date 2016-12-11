@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		0F13B3691DE2134D00F023E3 /* ICSignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F13B3681DE2134D00F023E3 /* ICSignupViewController.swift */; };
 		0F30CAC91DFDBCC600916E32 /* ICUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F30CAC81DFDBCC600916E32 /* ICUserModel.swift */; };
+		0F30CACD1DFDCCC800916E32 /* ICVenueService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F30CACC1DFDCCC800916E32 /* ICVenueService.swift */; };
+		0F30CACF1DFDCD8600916E32 /* ICVenueModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F30CACE1DFDCD8600916E32 /* ICVenueModel.swift */; };
 		0F61DE911DF473500067E49E /* ICAuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F61DE901DF473500067E49E /* ICAuthenticationService.swift */; };
 		0F6363781DEB34A200C08F85 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0F6363771DEB34A200C08F85 /* GoogleService-Info.plist */; };
 		0F63637A1DEB3EF000C08F85 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F6363791DEB3EF000C08F85 /* Constants.swift */; };
@@ -51,6 +53,8 @@
 /* Begin PBXFileReference section */
 		0F13B3681DE2134D00F023E3 /* ICSignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICSignupViewController.swift; sourceTree = "<group>"; };
 		0F30CAC81DFDBCC600916E32 /* ICUserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICUserModel.swift; sourceTree = "<group>"; };
+		0F30CACC1DFDCCC800916E32 /* ICVenueService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICVenueService.swift; sourceTree = "<group>"; };
+		0F30CACE1DFDCD8600916E32 /* ICVenueModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICVenueModel.swift; sourceTree = "<group>"; };
 		0F61DE901DF473500067E49E /* ICAuthenticationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICAuthenticationService.swift; sourceTree = "<group>"; };
 		0F6363771DEB34A200C08F85 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0F6363791DEB3EF000C08F85 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -113,6 +117,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F30CACA1DFDCA4800916E32 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				7D2945831DF31CC900E0F73C /* Grid.swift */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		0F30CACB1DFDCA5200916E32 /* Home Feed */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Home Feed";
+			sourceTree = "<group>";
+		};
 		0F6363741DEB33D900C08F85 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -129,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				0F30CAC81DFDBCC600916E32 /* ICUserModel.swift */,
+				0F30CACE1DFDCD8600916E32 /* ICVenueModel.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -136,7 +156,8 @@
 		0F6363761DEB33EB00C08F85 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				7D2945831DF31CC900E0F73C /* Grid.swift */,
+				0F30CACB1DFDCA5200916E32 /* Home Feed */,
+				0F30CACA1DFDCA4800916E32 /* Categories */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -148,6 +169,7 @@
 				0F6363791DEB3EF000C08F85 /* Constants.swift */,
 				0F63637C1DEB40CC00C08F85 /* ICUserService.swift */,
 				0F61DE901DF473500067E49E /* ICAuthenticationService.swift */,
+				0F30CACC1DFDCCC800916E32 /* ICVenueService.swift */,
 			);
 			name = Service;
 			sourceTree = "<group>";
@@ -519,6 +541,7 @@
 				0F13B3691DE2134D00F023E3 /* ICSignupViewController.swift in Sources */,
 				7DA68DF71DEB4A14007F2E84 /* ICLoginViewController.swift in Sources */,
 				7D2945841DF31CC900E0F73C /* Grid.swift in Sources */,
+				0F30CACF1DFDCD8600916E32 /* ICVenueModel.swift in Sources */,
 				0F63637D1DEB40CC00C08F85 /* ICUserService.swift in Sources */,
 				7DA68DF91DEB4BCC007F2E84 /* ICHelper.swift in Sources */,
 				7D294ECF1DE1FC8D0060DA97 /* AppDelegate.swift in Sources */,
@@ -526,6 +549,7 @@
 				0F63637F1DEB559F00C08F85 /* ICCategorySelectionViewController.swift in Sources */,
 				0F61DE911DF473500067E49E /* ICAuthenticationService.swift in Sources */,
 				0F30CAC91DFDBCC600916E32 /* ICUserModel.swift in Sources */,
+				0F30CACD1DFDCCC800916E32 /* ICVenueService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

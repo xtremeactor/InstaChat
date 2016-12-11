@@ -19,9 +19,11 @@ class ICCategorySelectionViewController: UIViewController, UICollectionViewDeleg
     // HW Task 10: Setup homefeed to copy instagram layout. You will have a username label at the top, a imageview in the center, and two buttons on the bottom (like and message). Embed in a navigation controller
     
     // HW Task 11: Signup for pixabay api key and familiarize yourself with their api
-    let categoriesArray = ["Rooftop Bars 🌇","Brunch 🍳","Burgers 🍔","Hidden Gems 🌠","Beer Gardens 🍻","Desserts 🍰","Travel ✈️","Celeb Hot Spots 🍾","Fun Things to Do 🎢","Pizza 🍕","Trendy ✅", "Cocktail Bars 🍸", "Date Spots 🌹", "Arts & Cuture 🏛", "Sports Bars 🏈", "Cheap Eats 💯", "Ice Cream 🍦", "Comfort Food 🍗 ", "Vegetarian/Vegan 🍆", "Workouts 💪",  "Coffee Shops ☕️", "Seafood 🍤 ", "Wine Bars 🍷", "Global Grub 🌏",   "Steals and Deals 💰"]
+    let categoriesArray = ["Rooftop Bars 🌇","Brunch 🍳","Burgers 🍔","Beer Gardens 🍻","Desserts 🍰","Travel ✈️","Celeb Hot Spots 🍾","Fun Things to Do 🎢","Pizza 🍕","Trendy ✅", "Cocktail Bars 🍸", "Date Spots 🌹", "Arts & Cuture 🏛", "Sports Bars 🏈", "Cheap Eats 💯", "Ice Cream 🍦", "Comfort Food 🍗 ", "Vegetarian/Vegan 🍆", "Workouts 💪",  "Coffee Shops ☕️", "Seafood 🍤 ", "Wine Bars 🍷", "Global Grub 🌏",   "Steals and Deals 💰"]
     
-    let categoriesStringArray = ["rooftop bar", "brunch", "burgers", "hidden gem", "beer gardens", "desserts", "travel", "celeb hot spot", "fun things to do", "pizza", "trendy", "cocktail bars", "date spots", "arts and culture", "sports bars", "cheap eats", "ice cream", "comfort food", "vegetarian", "workout", "coffee", "seafood" ,"wine bars", "global grun", "Steals and deals"]
+    
+    // ToDO task: map this some of these to yelp categories (https://www.yelp.com/developers/documentation/v2/all_category_list)
+    let categoriesStringArray = ["bars", "breakfast_brunch", "burgers", "beer gardens", "desserts", "travel", "celeb hot spot", "fun things to do", "pizza", "trendy", "cocktail bars", "date spots", "arts and culture", "sports bars", "cheap eats", "ice cream", "comfortfood", "vegetarian", "workout", "coffee", "seafood" ,"wine bars", "global grun", "Steals and deals"]
     
     
     
@@ -88,12 +90,11 @@ class ICCategorySelectionViewController: UIViewController, UICollectionViewDeleg
  
         ICUserService.sharedInstance.addPreferencesToFirebaseUser(preference: selectedCategories) { (error, completed) in
             if ((error) != nil){
-            AlertHelperKit().showAlert(self, title: "Error", message: "\(error)", button: "Ok")
-             }
-            else if (completed == true){
-
-            self.performSegue(withIdentifier: "categoryToHomeFeedSegue", sender: nil)
-        }
+                AlertHelperKit().showAlert(self, title: "Error", message: "\(error)", button: "Ok")
+            }
+            else if (completed == true){                
+                self.performSegue(withIdentifier: "categoryToHomeFeedSegue", sender: nil)
+            }
         
     }
     

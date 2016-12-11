@@ -17,6 +17,7 @@ class ICSignupViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var usernameTextfield: UITextField!
     @IBOutlet weak var passwordTextfield: UITextField!
     @IBOutlet weak var emailTextfield: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.usernameTextfield.delegate = self
@@ -53,8 +54,7 @@ class ICSignupViewController: UIViewController, UITextFieldDelegate {
                     ICUserService.sharedInstance.addUserToFirebase(email: email, username: username, completion: { (error, completed) in
                         if error != nil {
                             AlertHelperKit().showAlert(self, title: "Error adding to Firebase", message: "\(error)", button: "Ok")
-                        } else {
-                            
+                        } else {                            
                             // Authentication Service to third party APIs - Yelp, etc
                             ICAuthenticationService.sharedInstance.authenticateYelp(completion: { (error, isCompleted) in
                                 if ((error) != nil){

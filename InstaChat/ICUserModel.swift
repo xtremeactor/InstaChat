@@ -15,7 +15,7 @@ class User: Mappable {
     open var preferences: [String]?
     
     // Custom init method for setting properties
-    public init(username: String, email: String, preferences: Array<String>){
+    open func initWithValues(username: String, email: String, preferences: Array<String>){
         self.username = username
         self.email = email
         self.preferences = preferences
