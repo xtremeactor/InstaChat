@@ -12,7 +12,7 @@ class User: Mappable {
     // Defined properties
     open var username: String?
     open var email: String?
-    open var preferences: [String]?
+    open var preferences: Array<String>?
     
     // Custom init method for setting properties
     open func initWithValues(username: String, email: String, preferences: Array<String>){

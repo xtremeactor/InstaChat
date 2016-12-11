@@ -66,6 +66,17 @@ class ICUserService: NSObject {
             }
         }
     }
+    
+    func getUserFromFirebase(userId: String, completion: @escaping (NSError?, Bool, Dictionary<String, Any>) -> Void){
+        ref.child("users/\(userId)").observeSingleEvent(of: .value, with: { (snapshot) in
+            // Get user value
+            let value = snapshot.value as? Dictionary<String, AnyObject>
+            completion(nil, true, value!)
+        }) { (error) in
+            print(error.localizedDescription)
+            completion(error as NSError?, false, [:])
+        }
+    }
  
  
     

@@ -205,10 +205,10 @@
             </objects>
             <point key="canvasLocation" x="1738.4000000000001" y="532.98350824587715"/>
         </scene>
-        <!--View Controller-->
+        <!--Welcome View Controller-->
         <scene sceneID="4CU-AW-Bpw">
             <objects>
-                <viewController id="0GG-78-fXg" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ICWelcomeViewController" id="0GG-78-fXg" customClass="ICWelcomeViewController" customModule="InstaChat" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="reT-xD-VlJ"/>
                         <viewControllerLayoutGuide type="bottom" id="lfe-sc-4La"/>
