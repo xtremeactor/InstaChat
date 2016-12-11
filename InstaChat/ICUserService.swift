@@ -8,6 +8,7 @@
 
 import UIKit
 import FirebaseAuth
+import Firebase
 import SwiftyUserDefaults
 
 class ICUserService: NSObject {
@@ -41,10 +42,20 @@ class ICUserService: NSObject {
                 print(user!)
                 Defaults[.user_id] = user?.uid
                 completion(nil, true)
+                
+              
+            
+                
             }
         }
     }
  
+    
+    func savePreference(){
+        let food = selectedCategories[0]
+        FIRAnalytics.setUserPropertyString(food, forName: "Preference")
+        
+    }
     
     // Create a new service function that updates the users category preferences. 
     

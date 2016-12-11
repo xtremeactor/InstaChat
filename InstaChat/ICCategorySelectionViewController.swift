@@ -81,6 +81,9 @@ class ICCategorySelectionViewController: UIViewController, UICollectionViewDeleg
        self.performSegue(withIdentifier: "categoryToHomeFeedSegue", sender: nil)
         
         
+        ICUserService.sharedInstance.savePreference()
+        
+        
     }
     
    
