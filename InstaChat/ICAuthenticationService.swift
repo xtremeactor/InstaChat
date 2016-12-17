@@ -32,7 +32,7 @@ class ICAuthenticationService: NSObject {
                 let data = response.result.value as! NSDictionary
                 let accessToken = data.object(forKey: "access_token") as! String
                     
-                print(accessToken)
+                print("here is the \(accessToken)")
                 Defaults[.access_token] = accessToken
                 completion(nil, true)
                 
