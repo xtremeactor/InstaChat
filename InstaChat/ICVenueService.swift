@@ -20,7 +20,7 @@ var userFeedArray: [Venue] = []
 
 // TODO Jason: Create a serice function taht basically requests for yelp venues and passes in: category_filter
      
-    func loadinHomefeedData(categoryParams:String){
+    func loadinHomefeedData(categoryParams:String, completion: @escaping(NSError?, Bool, Array<Venue>) -> Void){
         let headers: HTTPHeaders = [
             "Authorization": "Bearer \(Defaults[.access_token]!)",
             "Accept": "application/json"
@@ -33,14 +33,9 @@ var userFeedArray: [Venue] = []
                 let venue = Mapper<Venue>().map(JSONObject: business)
                 self.userFeedArray.append(venue!)
                 print(self.userFeedArray)
-                //self.userFeed = Mapper<Venue>().map(JSONObject: data)
             }
+            completion(nil, true, self.userFeedArray)
             
-            
-            //   let venue = self.userFeed?.name
-            //   let imageURL = self.userFeed?.imageURL
-            //      print(venue)
-            //       print(imageURL)
         }
         
         

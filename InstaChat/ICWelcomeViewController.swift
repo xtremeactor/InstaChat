@@ -16,9 +16,10 @@ import SDWebImage
 class ICWelcomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var userObject: User?
-    var userFeed: Venue?
+    var userFeedArray: [Venue] = []
+    
     var str:String = ""
-     var imageURL: URL!
+    var imageURL: URL!
     
     
     override func viewDidLoad() {
@@ -37,11 +38,11 @@ class ICWelcomeViewController: UIViewController, UITableViewDelegate, UITableVie
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! tableView
         
-        cell.venueLabel.text = userFeed?.name
-        let newString = userFeed?.imageURL
-        imageURL=URL(string:newString!)!
-        
-        cell.venueImage.sd_setImage(with: imageURL, placeholderImage:UIImage(named:"placeholder.png"))
+//        cell.venueLabel.text = userFeed?.name
+//        let newString = userFeed?.imageURL
+//        imageURL=URL(string:newString!)!
+//        
+//        cell.venueImage.sd_setImage(with: imageURL, placeholderImage:UIImage(named:"placeholder.png"))
         
        return cell
 
@@ -74,7 +75,13 @@ class ICWelcomeViewController: UIViewController, UITableViewDelegate, UITableVie
             if i == array.count - 1 {
                 str.characters.removeLast()
                 //Make yelp call here to load feed
-                ICVenueService.sharedInstance.loadinHomefeedData(categoryParams: str)
+                ICVenueService.sharedInstance.loadinHomefeedData(categoryParams: str, completion: { (error, isCompleted, venueArray) in
+                    if (error == nil && isCompleted == true) {
+                        self.userFeedArray.removeAll()
+                        self.userFeedArray = venueArray
+                        // tableview.reloadData()
+                    }
+                })
 
             }
         }
