@@ -19,8 +19,9 @@ class ICWelcomeViewController: UIViewController, UITableViewDelegate, UITableVie
     var userFeedArray: [Venue] = []
     
     var str:String = ""
-    var imageURL: URL!
+    var venueimageURL: URL!
     
+    @IBOutlet var tableView: UITableView!
     
     override func viewDidLoad() {
         loadInUser()
@@ -30,7 +31,7 @@ class ICWelcomeViewController: UIViewController, UITableViewDelegate, UITableVie
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return (userObject?.preferences?.count)!
+        return userFeedArray.count
 
     }
     
@@ -38,11 +39,19 @@ class ICWelcomeViewController: UIViewController, UITableViewDelegate, UITableVie
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! tableView
         
-//        cell.venueLabel.text = userFeed?.name
-//        let newString = userFeed?.imageURL
-//        imageURL=URL(string:newString!)!
-//        
-//        cell.venueImage.sd_setImage(with: imageURL, placeholderImage:UIImage(named:"placeholder.png"))
+        let venueName = userFeedArray[indexPath.row].name
+       cell.venueLabel.text = venueName
+
+        let venueImage = userFeedArray[indexPath.row].imageURL
+       venueimageURL=URL(string:venueImage!)!
+       
+       cell.venueImage.sd_setImage(with: venueimageURL, placeholderImage:UIImage(named:"placeholder.png"))
+        
+        let venueLocation = userFeedArray[indexPath.row].location
+        
+        cell.venueLocation.text = venueLocation
+        
+        cell.venueLocation.text = "test"
         
        return cell
 
@@ -60,6 +69,7 @@ class ICWelcomeViewController: UIViewController, UITableViewDelegate, UITableVie
                 self.userObject = Mapper<User>().map(JSON: responseDict)
                 // Now we have the preferences of our user!
                 self.getPreferenceAndLoadFeed()
+                
             }
         }
       }
@@ -79,8 +89,12 @@ class ICWelcomeViewController: UIViewController, UITableViewDelegate, UITableVie
                     if (error == nil && isCompleted == true) {
                         self.userFeedArray.removeAll()
                         self.userFeedArray = venueArray
-                        // tableview.reloadData()
+                         self.tableView.reloadData()
                     }
+                    print("testing 123 \(self.userFeedArray[1].name)")
+                    self.tableView.reloadData()
+
+                    
                 })
 
             }

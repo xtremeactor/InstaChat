@@ -18,5 +18,7 @@ class tableView: UITableViewCell {
     @IBOutlet var venueImage: UIImageView!
     
     
+    @IBOutlet var venueLocation: UILabel!
+    
 
 }
