@@ -33,6 +33,7 @@ class ICAuthenticationService: NSObject {
                 let accessToken = data.object(forKey: "access_token") as! String
                     
                 print("here is the \(accessToken)")
+                // Rename this to yelp access token
                 Defaults[.access_token] = accessToken
                 completion(nil, true)
                 

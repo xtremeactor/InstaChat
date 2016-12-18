@@ -23,8 +23,6 @@ class ICWelcomeViewController: UIViewController, UITableViewDelegate, UITableVie
     
     override func viewDidLoad() {
         loadInUser()
-        getPreference()
-        ICVenueService.sharedInstance.loadInData(url: str)
     }
 
     // TODO Benny: Call FB for user data and map to our User object
@@ -43,18 +41,14 @@ class ICWelcomeViewController: UIViewController, UITableViewDelegate, UITableVie
         let newString = userFeed?.imageURL
         imageURL=URL(string:newString!)!
         
-     cell.venueImage.sd_setImage(with: imageURL, placeholderImage:UIImage(named:"placeholder.png"))
+        cell.venueImage.sd_setImage(with: imageURL, placeholderImage:UIImage(named:"placeholder.png"))
         
        return cell
 
     }
     
-    
-    
-    
-    
     func loadInUser() {
-        let userId = Defaults[.user_id]
+        let userId = Defaults[.user_id]        
         // We are creating/updating the User Object by grabbing the user info from Firebase
         ICUserService.sharedInstance.getUserFromFirebase(userId: userId!) { (error, completed, responseDict) in
             if error != nil {
@@ -64,33 +58,25 @@ class ICWelcomeViewController: UIViewController, UITableViewDelegate, UITableVie
                 // Direct mapping of the responseDict into our User model
                 self.userObject = Mapper<User>().map(JSON: responseDict)
                 // Now we have the preferences of our user!
-                let preferences = self.userObject?.preferences
-                print(preferences!)
-                
-                
-            }            }
+                self.getPreferenceAndLoadFeed()
+            }
+        }
       }
-    
-    func loadinPreferences(){
-        
-        
-        
-    }
-    
                
     /*
      ToDO Jason: Access the preference property of the User object, extract all the preferences
      and append them as a single string separated by commas with no space ("bars,french") */
-
-    func getPreference(){
-        let array = userObject?.preferences
-              for i in array! {
-                str.append("\(i),")
-                print(str)
-                }
-
-          }
     
-    /* Make a call to yelp */
-  
+    func getPreferenceAndLoadFeed(){
+        let array = userObject?.preferences ?? []
+        for i in 0..<array.count {
+            str.append("\(array[i]),")
+            if i == array.count - 1 {
+                str.characters.removeLast()
+                //Make yelp call here to load feed
+                ICVenueService.sharedInstance.loadinHomefeedData(categoryParams: str)
+
+            }
+        }
+    }
    }
