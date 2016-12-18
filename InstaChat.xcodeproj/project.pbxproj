@@ -16,6 +16,10 @@
 		0F63637A1DEB3EF000C08F85 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F6363791DEB3EF000C08F85 /* Constants.swift */; };
 		0F63637D1DEB40CC00C08F85 /* ICUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F63637C1DEB40CC00C08F85 /* ICUserService.swift */; };
 		0F63637F1DEB559F00C08F85 /* ICCategorySelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F63637E1DEB559F00C08F85 /* ICCategorySelectionViewController.swift */; };
+		0F81F8041E07033A00E1923C /* ICMessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F81F8031E07033A00E1923C /* ICMessageTableViewCell.swift */; };
+		0F81F8061E07038E00E1923C /* ICMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F81F8051E07038E00E1923C /* ICMessageViewController.swift */; };
+		0F81F8081E0704A000E1923C /* ICMessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F81F8071E0704A000E1923C /* ICMessageModel.swift */; };
+		0F81F80A1E0710CF00E1923C /* ICMessageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F81F8091E0710CF00E1923C /* ICMessageService.swift */; };
 		1A194D733BC5AD3921C8705F /* (null) in Frameworks */ = {isa = PBXBuildFile; };
 		435349AC48DEAAB443D3E2EB /* Pods_InstaChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A21C974D7CF333FA9CD3136F /* Pods_InstaChat.framework */; };
 		63C645ED34E732BA23FE34B8 /* Pods_InstaChatTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F8AAA89F79FB38DB94EA112 /* Pods_InstaChatTests.framework */; };
@@ -61,6 +65,10 @@
 		0F6363791DEB3EF000C08F85 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		0F63637C1DEB40CC00C08F85 /* ICUserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICUserService.swift; sourceTree = "<group>"; };
 		0F63637E1DEB559F00C08F85 /* ICCategorySelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICCategorySelectionViewController.swift; sourceTree = "<group>"; };
+		0F81F8031E07033A00E1923C /* ICMessageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICMessageTableViewCell.swift; sourceTree = "<group>"; };
+		0F81F8051E07038E00E1923C /* ICMessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICMessageViewController.swift; sourceTree = "<group>"; };
+		0F81F8071E0704A000E1923C /* ICMessageModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICMessageModel.swift; sourceTree = "<group>"; };
+		0F81F8091E0710CF00E1923C /* ICMessageService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICMessageService.swift; sourceTree = "<group>"; };
 		23AAD1E0CBEF8347C1784042 /* Pods-InstaChatUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaChatUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InstaChatUITests/Pods-InstaChatUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		3C1826457E7AD9D744E3B7B9 /* Pods-InstaChatTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaChatTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InstaChatTests/Pods-InstaChatTests.debug.xcconfig"; sourceTree = "<group>"; };
 		43C0BDECBE8CCF4D8BD7EC1A /* Pods-InstaChatUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaChatUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-InstaChatUITests/Pods-InstaChatUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -143,6 +151,7 @@
 				0F13B3681DE2134D00F023E3 /* ICSignupViewController.swift */,
 				7DA68DF41DEB47D1007F2E84 /* ICWelcomeViewController.swift */,
 				0F63637E1DEB559F00C08F85 /* ICCategorySelectionViewController.swift */,
+				0F81F8051E07038E00E1923C /* ICMessageViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -152,6 +161,7 @@
 			children = (
 				0F30CAC81DFDBCC600916E32 /* ICUserModel.swift */,
 				0F30CACE1DFDCD8600916E32 /* ICVenueModel.swift */,
+				0F81F8071E0704A000E1923C /* ICMessageModel.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -159,6 +169,7 @@
 		0F6363761DEB33EB00C08F85 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0F81F8021E07032100E1923C /* Message */,
 				0F30CACB1DFDCA5200916E32 /* Home Feed */,
 				0F30CACA1DFDCA4800916E32 /* Categories */,
 			);
@@ -173,8 +184,17 @@
 				0F63637C1DEB40CC00C08F85 /* ICUserService.swift */,
 				0F61DE901DF473500067E49E /* ICAuthenticationService.swift */,
 				0F30CACC1DFDCCC800916E32 /* ICVenueService.swift */,
+				0F81F8091E0710CF00E1923C /* ICMessageService.swift */,
 			);
 			name = Service;
+			sourceTree = "<group>";
+		};
+		0F81F8021E07032100E1923C /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				0F81F8031E07033A00E1923C /* ICMessageTableViewCell.swift */,
+			);
+			name = Message;
 			sourceTree = "<group>";
 		};
 		6409EAAC29EB8BAFB8D3B219 /* Frameworks */ = {
@@ -546,10 +566,14 @@
 				7D2945841DF31CC900E0F73C /* Grid.swift in Sources */,
 				7D0DFA5F1E05D9CD00EBD9AB /* tableView.swift in Sources */,
 				0F30CACF1DFDCD8600916E32 /* ICVenueModel.swift in Sources */,
+				0F81F8061E07038E00E1923C /* ICMessageViewController.swift in Sources */,
 				0F63637D1DEB40CC00C08F85 /* ICUserService.swift in Sources */,
+				0F81F8081E0704A000E1923C /* ICMessageModel.swift in Sources */,
 				7DA68DF91DEB4BCC007F2E84 /* ICHelper.swift in Sources */,
+				0F81F80A1E0710CF00E1923C /* ICMessageService.swift in Sources */,
 				7D294ECF1DE1FC8D0060DA97 /* AppDelegate.swift in Sources */,
 				0F63637A1DEB3EF000C08F85 /* Constants.swift in Sources */,
+				0F81F8041E07033A00E1923C /* ICMessageTableViewCell.swift in Sources */,
 				0F63637F1DEB559F00C08F85 /* ICCategorySelectionViewController.swift in Sources */,
 				0F61DE911DF473500067E49E /* ICAuthenticationService.swift in Sources */,
 				0F30CAC91DFDBCC600916E32 /* ICUserModel.swift in Sources */,

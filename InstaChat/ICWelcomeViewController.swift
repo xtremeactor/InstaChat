@@ -38,20 +38,15 @@ class ICWelcomeViewController: UIViewController, UITableViewDelegate, UITableVie
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! tableView
-        
         let venueName = userFeedArray[indexPath.row].name
-       cell.venueLabel.text = venueName
-
+        cell.venueLabel.text = venueName
         let venueImage = userFeedArray[indexPath.row].imageURL
-       venueimageURL=URL(string:venueImage!)!
-       
-       cell.venueImage.sd_setImage(with: venueimageURL, placeholderImage:UIImage(named:"placeholder.png"))
-        
+        venueimageURL=URL(string:venueImage!)!
+        cell.venueImage.sd_setImage(with: venueimageURL, placeholderImage:UIImage(named:"placeholder.png"))
         let venueLocation = userFeedArray[indexPath.row].location as! Array<String>
-        
         cell.venueLocation.text = ("\(venueLocation[0]) \(venueLocation[1])")
-        
-        
+        cell.messageButton.tag = indexPath.row  
+        cell.messageButton.addTarget(self, action: #selector(ICWelcomeViewController.showMessageVC(sender:)), for: .touchUpInside)
         
        return cell
 
@@ -99,4 +94,20 @@ class ICWelcomeViewController: UIViewController, UITableViewDelegate, UITableVie
             }
         }
     }
-   }
+    
+    func showMessageVC(sender: UIButton){
+        let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "ICMessageViewController") as! ICMessageViewController
+        vc.userObject = userObject
+        vc.venueObject = userFeedArray[sender.tag]
+        present(vc, animated: true, completion: nil)
+    }
+    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "messageSegue" {
+//            let vc = segue.destination as! ICMessageViewController
+//            vc.userObject = userObject
+//            
+//        }
+//    }
+}

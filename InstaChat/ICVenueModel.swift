@@ -12,10 +12,11 @@ import ObjectMapper
 
 // Defined properties
 class Venue: Mappable {
-
+    open var venueId: String?
     open var name: String?
     open var imageURL: String?
     open var location: Array<AnyObject>?
+    open var messages: Array<AnyObject>?
 
     // init method that's called initially when you invoke Mappable
     public required init?(map: Map) {
@@ -24,6 +25,7 @@ class Venue: Mappable {
 
     // Mappable: mapping method for JSON -> Object
     open func mapping(map: Map) {
+        venueId <- map["id"]
         name    <- map["name"]
         imageURL <- map["image_url"]
         location <- map["location.display_address"]

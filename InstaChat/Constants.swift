@@ -9,7 +9,7 @@
 import SwiftyUserDefaults
 
 extension DefaultsKeys {
-    static let user_id = DefaultsKey<String?>("uid")
+    static let user_id = DefaultsKey<String?>("uid")    
     static let access_token = DefaultsKey<String?>("access_token")
 }
 
