@@ -47,11 +47,11 @@ class ICWelcomeViewController: UIViewController, UITableViewDelegate, UITableVie
        
        cell.venueImage.sd_setImage(with: venueimageURL, placeholderImage:UIImage(named:"placeholder.png"))
         
-        let venueLocation = userFeedArray[indexPath.row].location
+        let venueLocation = userFeedArray[indexPath.row].location as! Array<String>
         
-        cell.venueLocation.text = venueLocation
+        cell.venueLocation.text = ("\(venueLocation[0]) \(venueLocation[1])")
         
-        cell.venueLocation.text = "test"
+        
         
        return cell
 
@@ -91,7 +91,6 @@ class ICWelcomeViewController: UIViewController, UITableViewDelegate, UITableVie
                         self.userFeedArray = venueArray
                          self.tableView.reloadData()
                     }
-                    print("testing 123 \(self.userFeedArray[1].name)")
                     self.tableView.reloadData()
 
                     
