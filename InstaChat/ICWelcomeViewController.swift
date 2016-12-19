@@ -25,6 +25,16 @@ class ICWelcomeViewController: UIViewController, UITableViewDelegate, UITableVie
     
     override func viewDidLoad() {
         loadInUser()
+        tableView.separatorStyle = UITableViewCellSeparatorStyle.singleLine
+
+        
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
+        self.navigationItem.setHidesBackButton(true, animated: true)
+  
+        
+        
+        
+        
     }
 
     // TODO Benny: Call FB for user data and map to our User object

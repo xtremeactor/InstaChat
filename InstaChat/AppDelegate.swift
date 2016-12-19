@@ -18,15 +18,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         FIRApp.configure()
-        if ((Defaults[.user_id]) != nil){
+      //  if ((Defaults[.user_id]) != nil){
+       //     let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
+      //      let rootVC = storyboard.instantiateViewController(withIdentifier: "ICWelcomeViewController")
+       //     window?.rootViewController = rootVC
+            
+    //    } else{
             let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
-            let rootVC = storyboard.instantiateViewController(withIdentifier: "ICWelcomeViewController")
+            let rootVC = storyboard.instantiateViewController(withIdentifier: "nav")
             window?.rootViewController = rootVC
-        } else{
-            let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
-            let rootVC = storyboard.instantiateViewController(withIdentifier: "ViewController")
-            window?.rootViewController = rootVC
-        }
+          //  rootVC.navigationController?.isNavigationBarHidden = false
+     //   }
     
                
         return true

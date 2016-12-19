@@ -25,6 +25,7 @@
 		63C645ED34E732BA23FE34B8 /* Pods_InstaChatTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F8AAA89F79FB38DB94EA112 /* Pods_InstaChatTests.framework */; };
 		7C48A29D6A713F75022514CF /* Pods_InstaChatUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AA4DBC72F688F63BEC81F5C /* Pods_InstaChatUITests.framework */; };
 		7D0DFA5F1E05D9CD00EBD9AB /* tableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D0DFA5E1E05D9CD00EBD9AB /* tableView.swift */; };
+		7D1CCB011E0786190056C295 /* WishListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1CCB001E0786190056C295 /* WishListViewController.swift */; };
 		7D2945841DF31CC900E0F73C /* Grid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2945831DF31CC900E0F73C /* Grid.swift */; };
 		7D294ECF1DE1FC8D0060DA97 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D294ECE1DE1FC8D0060DA97 /* AppDelegate.swift */; };
 		7D294ED11DE1FC8D0060DA97 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D294ED01DE1FC8D0060DA97 /* ViewController.swift */; };
@@ -74,6 +75,7 @@
 		43C0BDECBE8CCF4D8BD7EC1A /* Pods-InstaChatUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaChatUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-InstaChatUITests/Pods-InstaChatUITests.release.xcconfig"; sourceTree = "<group>"; };
 		6AA4DBC72F688F63BEC81F5C /* Pods_InstaChatUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstaChatUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D0DFA5E1E05D9CD00EBD9AB /* tableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tableView.swift; sourceTree = "<group>"; };
+		7D1CCB001E0786190056C295 /* WishListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WishListViewController.swift; sourceTree = "<group>"; };
 		7D2945831DF31CC900E0F73C /* Grid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Grid.swift; sourceTree = "<group>"; };
 		7D294ECB1DE1FC8D0060DA97 /* InstaChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstaChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D294ECE1DE1FC8D0060DA97 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 				7DA68DF41DEB47D1007F2E84 /* ICWelcomeViewController.swift */,
 				0F63637E1DEB559F00C08F85 /* ICCategorySelectionViewController.swift */,
 				0F81F8051E07038E00E1923C /* ICMessageViewController.swift */,
+				7D1CCB001E0786190056C295 /* WishListViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -560,6 +563,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D294ED11DE1FC8D0060DA97 /* ViewController.swift in Sources */,
+				7D1CCB011E0786190056C295 /* WishListViewController.swift in Sources */,
 				7DA68DF51DEB47D1007F2E84 /* ICWelcomeViewController.swift in Sources */,
 				0F13B3691DE2134D00F023E3 /* ICSignupViewController.swift in Sources */,
 				7DA68DF71DEB4A14007F2E84 /* ICLoginViewController.swift in Sources */,
