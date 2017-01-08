@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ICSearchViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, ICSearchViewDelegate {
+class ICSearchViewController: UIViewController, ICSearchViewDelegate {
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var searchResultTableView: UITableView!
     var searchResultsArray:[Venue] = []
@@ -27,20 +27,6 @@ class ICSearchViewController: UIViewController, UITableViewDelegate, UITableView
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return searchResultsArray.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell")! as UITableViewCell
-        cell.textLabel?.text = searchResultsArray[indexPath.row].name
-        return cell
     }
     
     func updateTableView(_ text: String) {
@@ -63,5 +49,21 @@ extension ICSearchViewController: UISearchBarDelegate{
     
     public func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String){
         self.searchDelegate?.updateTableView(searchText)
+    }
+}
+
+extension ICSearchViewController: UITableViewDataSource, UITableViewDelegate{
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return searchResultsArray.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell")! as UITableViewCell
+        cell.textLabel?.text = searchResultsArray[indexPath.row].name
+        return cell
     }
 }
