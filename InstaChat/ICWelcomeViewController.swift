@@ -13,7 +13,7 @@ import AlertHelperKit
 import Alamofire
 import SDWebImage
 
-class ICWelcomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ICWelcomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITabBarDelegate {
     
     var userObject: User?
     var userFeedArray: [Venue] = []
@@ -22,23 +22,30 @@ class ICWelcomeViewController: UIViewController, UITableViewDelegate, UITableVie
     var venueimageURL: URL!
     
     @IBOutlet var tableView: UITableView!
+    @IBOutlet weak var tabBar: UITabBar!
+    @IBOutlet weak var searchView: UIView!
     
     override func viewDidLoad() {
         loadInUser()
         tableView.separatorStyle = UITableViewCellSeparatorStyle.singleLine
-
         
         self.navigationController?.setNavigationBarHidden(false, animated: true)
         self.navigationItem.setHidesBackButton(true, animated: true)
-  
-        
-        
-        
-        
+        searchView.isHidden = true
+        tabBar.delegate = self
+        tabBar.selectedItem = tabBar.items![0]
     }
-
-    // TODO Benny: Call FB for user data and map to our User object
     
+    func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
+        switch item.tag {
+        case 0:
+            searchView.isHidden = true
+        case 1:
+            searchView.isHidden = false
+        default:
+            searchView.isHidden = true
+        }
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return userFeedArray.count
@@ -113,11 +120,10 @@ class ICWelcomeViewController: UIViewController, UITableViewDelegate, UITableVie
         present(vc, animated: true, completion: nil)
     }
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "messageSegue" {
-//            let vc = segue.destination as! ICMessageViewController
-//            vc.userObject = userObject
-//            
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "searchSegue" {
+//            let vc = segue.destination as! ICSearchViewController
+//            vc.searchDelegate =
 //        }
-//    }
+    }
 }

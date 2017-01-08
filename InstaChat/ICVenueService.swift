@@ -13,10 +13,11 @@ import SwiftyUserDefaults
 
 class ICVenueService: NSObject {
     
-static let sharedInstance = ICVenueService()
+    static let sharedInstance = ICVenueService()
 
-var userObject: User?
-var userFeedArray: [Venue] = []
+    var userObject: User?
+    var userFeedArray: [Venue] = []
+    var searchResultsArray: [Venue] = []
 
 // TODO Jason: Create a serice function taht basically requests for yelp venues and passes in: category_filter
      
@@ -37,7 +38,25 @@ var userFeedArray: [Venue] = []
             completion(nil, true, self.userFeedArray)
             
         }
-        
-        
+    }
+    
+    func loadInDataWithVenueName(_ venueName: String, completion: @escaping(NSError?, Bool, Array<Venue>) -> Void){
+        let headers: HTTPHeaders = [
+            "Authorization": "Bearer \(Defaults[.access_token]!)",
+            "Accept": "application/json"
+        ]
+        Alamofire.request("https://api.yelp.com/v3/businesses/search?term=\(venueName)&location=New+York", method: .get, headers: headers).responseJSON { response in
+            
+            let data = response.result.value as! NSDictionary
+            let businessArray = data["businesses"] as! Array<AnyObject>
+            self.searchResultsArray.removeAll()
+            for business in businessArray {
+                let venue = Mapper<Venue>().map(JSONObject: business)
+                self.searchResultsArray.append(venue!)
+                print(self.searchResultsArray)
+            }
+            completion(nil, true, self.searchResultsArray)
+            
+        }
     }
 }
