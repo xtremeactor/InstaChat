@@ -16,7 +16,7 @@ class ICMessageService: NSObject {
 
     func addMessage(username: String, message: String, venueId: String, date: UInt64, completion: @escaping (NSError?, Bool) -> Void){
         // FIrebase method for adding a user record to DB
-        let post = ["username": username, "message": message]
+        let post = ["username": username, "message": message, "timestamp": date] as [String : Any]
         self.ref.child("venue/\(venueId)/\(date)").setValue(post)
         // https://instachat-25d03.firebaseio.com/users/ygGpovmTtFRkQDoLvP6YzU1tb8F3/email
         completion(nil, true)

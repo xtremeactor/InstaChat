@@ -29,6 +29,6 @@ class Message: Mappable {
     open func mapping(map: Map) {
         username    <- map["username"]
         message     <- map["message"]
-        datetime    <- map["datetime"]
+        datetime    <- map["timestamp"]
     }
 }

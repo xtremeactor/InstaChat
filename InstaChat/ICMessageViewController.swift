@@ -50,12 +50,23 @@ class ICMessageViewController: UIViewController, UITableViewDelegate, UITableVie
     func loadInMessages(){
         ICMessageService.sharedInstance.getPreviousMessages(venueId: (venueObject?.venueId)!) { (error, isCompleted, messageArray) in
             if error == nil && isCompleted == true {
+                
                 self.messages.removeAll()
-                self.messages = messageArray
+                self.messages = self.sortMessages(messageArray: messageArray)
                 self.messageTableView.reloadData()
             }
         }
     }
+    
+    func sortMessages(messageArray: [Message]) -> [Message]{
+        var sortedMessageArray = messageArray
+        // Sort function - operates on any Array type, and it compares two variables at the same time (per index).
+        sortedMessageArray.sort { (message1, message2) -> Bool in
+            return message1.datetime! < message2.datetime!
+        }
+        return sortedMessageArray
+    }
+    
     func showKeyboard(notification: NSNotification) {
         //notification.userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue].size.height
         let keyboardSize = notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as! NSValue
@@ -84,5 +95,9 @@ class ICMessageViewController: UIViewController, UITableViewDelegate, UITableVie
         cell.usernameLabel.text = messages[indexPath.row].username!
         cell.messageTextView.text = messages[indexPath.row].message!
         return cell
+    }
+    
+    @IBAction func backPressed(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
     }
 }
